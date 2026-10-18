@@ -25,3 +25,16 @@ honest state ("built and tested; in review", "planned").
 
 GitHub Pages serves `docs/` from the `main` branch exactly as committed. It usually updates within
 a minute or two.
+
+## Where things live
+
+- Website: https://jpdexter101-lang.github.io/hearth-showcase/
+- Repository: https://github.com/jpdexter101-lang/hearth-showcase (public)
+- GitHub Pages serves `docs/` from `main`. No GitHub Actions, no secrets.
+- Commits use the account's GitHub no-reply address, never a personal email.
+- The private terms list used by `check.mjs` is kept with the private project, not here.
+
+## The approval rule
+
+Nothing is published without the owner's explicit approval of that specific change. An update can
+be drafted and previewed locally at any time; it is pushed only after it is approved.
