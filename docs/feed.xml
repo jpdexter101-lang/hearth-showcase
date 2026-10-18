@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hearth development updates</title>
+  <link href="https://jpdexter101-lang.github.io/hearth-showcase/"/>
+  <link rel="self" href="https://jpdexter101-lang.github.io/hearth-showcase/feed.xml"/>
+  <id>https://jpdexter101-lang.github.io/hearth-showcase/</id>
+  <updated>2026-10-17T00:00:00Z</updated>
+  <entry>
+    <title>Connect your AI, right after you create your account</title>
+    <id>https://jpdexter101-lang.github.io/hearth-showcase/#2026-10-17-connect-your-ai</id>
+    <link href="https://jpdexter101-lang.github.io/hearth-showcase/#updates"/>
+    <updated>2026-10-17T00:00:00Z</updated>
+    <summary>Setup now goes straight from creating your account to connecting Ember&#39;s AI. Hearth only offers the services it can really connect to, explains in plain English what AI use costs, and runs a three-part test before Ember uses it: is it installed, is it signed in and answering, and can Ember use Hearth&#39;s tools through it. You can skip it, and everything that doesn&#39;t need an AI keeps working. Close the browser halfway and setup picks up where you left off.</summary>
+  </entry>
+  <entry>
+    <title>Where we&#39;re headed: Ember builds your homelab</title>
+    <id>https://jpdexter101-lang.github.io/hearth-showcase/#2026-10-17-guided-build-vision</id>
+    <link href="https://jpdexter101-lang.github.io/hearth-showcase/#updates"/>
+    <updated>2026-10-17T00:00:00Z</updated>
+    <summary>We&#39;ve written down the whole first-run experience we&#39;re building toward: tell Ember what you&#39;d love to do, let it look at your real setup, approve a plan, then watch it create accounts, store keys safely, configure each app, and check that everything works. It will be built in small steps, starting with apps you already run, and every change keeps needing your approval.</summary>
+  </entry>
+  <entry>
+    <title>Plans that never quietly drop what you asked for</title>
+    <id>https://jpdexter101-lang.github.io/hearth-showcase/#2026-10-16-planner-keeps-every-wish</id>
+    <link href="https://jpdexter101-lang.github.io/hearth-showcase/#updates"/>
+    <updated>2026-10-16T00:00:00Z</updated>
+    <summary>The setup planner now keeps every wish you state. Anything it can&#39;t fit on your computer is shown with the reason, what it would take, and other ways to get it, and you choose whether to include it anyway, save it for later, or accept a substitute.</summary>
+  </entry>
+  <entry>
+    <title>Hello, Hearth. Meet Ember.</title>
+    <id>https://jpdexter101-lang.github.io/hearth-showcase/#2026-10-16-meet-hearth-and-ember</id>
+    <link href="https://jpdexter101-lang.github.io/hearth-showcase/#updates"/>
+    <updated>2026-10-16T00:00:00Z</updated>
+    <summary>The project has its name and its look: Hearth, with an ember-orange theme, and Ember, its AI administrator, shown as a living flame. You can rename Ember, choose from five voices and twenty-five looks, or use your own picture.</summary>
+  </entry>
+  <entry>
+    <title>Requested movies, followed until they arrive</title>
+    <id>https://jpdexter101-lang.github.io/hearth-showcase/#2026-10-15-release-watch</id>
+    <link href="https://jpdexter101-lang.github.io/hearth-showcase/#updates"/>
+    <updated>2026-10-15T00:00:00Z</updated>
+    <summary>Hearth can follow the movies you request, notice when their digital release date arrives, and tell you once if something is in the way. It only reads: it never searches or downloads on its own.</summary>
+  </entry>
+</feed>

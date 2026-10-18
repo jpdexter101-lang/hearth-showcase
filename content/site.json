@@ -1,0 +1,86 @@
+{
+  "name": "Hearth",
+  "tagline": "Your homelab, intelligently managed.",
+  "description": "Hearth brings your services, your infrastructure, and an AI administrator together in one place. Ember, its AI, looks after your homelab with you: it investigates, explains, and fixes things through plans you approve.",
+  "siteUrl": "https://jpdexter101-lang.github.io/hearth-showcase/",
+  "repoUrl": "https://github.com/jpdexter101-lang/hearth-showcase",
+  "maker": "Dragon's Oath",
+  "status": "In active development. Not available to download yet.",
+  "emberLoop": [
+    {
+      "step": "Discuss",
+      "stage": "implemented",
+      "note": "Talk or type, in plain words."
+    },
+    {
+      "step": "Investigate",
+      "stage": "implemented",
+      "note": "Reads logs, app status, and your machine through Hearth's own tools."
+    },
+    {
+      "step": "Diagnose",
+      "stage": "implemented",
+      "note": "Explains what is wrong and how sure it is."
+    },
+    {
+      "step": "Recommend",
+      "stage": "implemented",
+      "note": "Proposes an exact plan, step by step."
+    },
+    {
+      "step": "Approve",
+      "stage": "implemented",
+      "note": "Nothing changes until you approve that exact plan."
+    },
+    {
+      "step": "Execute",
+      "stage": "in-development",
+      "note": "Restarts and a first set of app settings today. Installing apps is planned."
+    },
+    {
+      "step": "Verify",
+      "stage": "in-development",
+      "note": "Every change is checked, and undone on its own if it fails. Whole-build checks are planned."
+    },
+    {
+      "step": "Remember",
+      "stage": "implemented",
+      "note": "Keeps what it learned, with you reviewing what it saves."
+    }
+  ],
+  "screens": [
+    {
+      "file": "hearth-home.png",
+      "title": "Home",
+      "caption": "Your homelab at a glance, with a getting-started list built from what is really there."
+    },
+    {
+      "file": "home-hub.png",
+      "title": "Ember at the center",
+      "caption": "Ask Ember anything from Home, beside your projects and an at-a-glance view of your homelab."
+    },
+    {
+      "file": "plan-6-plan.png",
+      "title": "A plan that fits your computer",
+      "caption": "Every app explained: what it does, why it was picked, what it costs, and whether it runs comfortably on your machine."
+    },
+    {
+      "file": "job-review.png",
+      "title": "You approve the exact plan",
+      "caption": "Each step says how it will be checked and what happens if a later step fails. Approval covers this plan, once."
+    }
+  ],
+  "concept": {
+    "title": "Design concept: the live build feed",
+    "lines": [
+      "Opening Radarr: connected",
+      "Checking for an existing account: none found",
+      "Creating your Radarr account: done",
+      "Saving Radarr's API key to the vault: stored securely",
+      "Setting up movie folders and naming: done",
+      "Applying your quality choices: in progress",
+      "Testing the connection to Prowlarr: waiting"
+    ]
+  },
+  "copyright": "© 2026 Dragon's Oath. All rights reserved."
+}

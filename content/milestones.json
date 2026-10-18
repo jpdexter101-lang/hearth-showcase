@@ -1,0 +1,153 @@
+{
+  "asOf": "2026-10-17",
+  "stages": [
+    {
+      "id": "planned",
+      "label": "Planned",
+      "meaning": "Designed or on the roadmap. Not built yet."
+    },
+    {
+      "id": "in-development",
+      "label": "In development",
+      "meaning": "Being built now, or partly built."
+    },
+    {
+      "id": "implemented",
+      "label": "Implemented",
+      "meaning": "Built and passing automated tests. Waiting for hands-on review by the project owner."
+    },
+    {
+      "id": "verified",
+      "label": "Verified",
+      "meaning": "The project owner has personally confirmed it working on a real homelab."
+    },
+    {
+      "id": "released",
+      "label": "Released",
+      "meaning": "Available to download in a public release."
+    }
+  ],
+  "milestones": [
+    {
+      "id": "interface",
+      "title": "Core Hearth interface",
+      "stage": "implemented",
+      "summary": "Home, services, projects, to-dos, saved work, storage, and settings in one place, on desktop and phone.",
+      "detail": "An earlier version runs every day on our own test homelab. Most pieces are still waiting for the owner's final hands-on sign-off."
+    },
+    {
+      "id": "ember",
+      "title": "Ember, the AI administrator",
+      "stage": "implemented",
+      "summary": "Ember looks into problems with Hearth's own tools, explains what it found, and proposes fixes you approve.",
+      "detail": "Works through Claude Code today. Ember never gets a shell, your files, or your passwords."
+    },
+    {
+      "id": "monitoring",
+      "title": "Service discovery and monitoring",
+      "stage": "implemented",
+      "summary": "Finds the containers and apps on a machine, watches their health, and reads inside common apps like the *arr apps, Plex, and qBittorrent.",
+      "detail": "Other machines are watched over the network today; deeper checks there are planned."
+    },
+    {
+      "id": "onboarding",
+      "title": "Guided first-run setup",
+      "stage": "in-development",
+      "summary": "Create your account, connect an AI, and make Ember your own, in one guided flow that picks up where you left off.",
+      "detail": "Account setup and personalization are built. The Connect your AI step is built and in review."
+    },
+    {
+      "id": "providers",
+      "title": "Choice of AI provider",
+      "stage": "in-development",
+      "summary": "Use the AI you already have. Claude Code works today; Codex, OpenAI-compatible services, and local models through Ollama are planned.",
+      "detail": "Each provider must be limited to Hearth's own tools before it is offered."
+    },
+    {
+      "id": "planning",
+      "title": "AI-assisted homelab planning",
+      "stage": "implemented",
+      "summary": "Answer a few plain questions, let Hearth look at your computer (only if you say yes), and get a starter plan that fits it.",
+      "detail": "Plans only for now: nothing is installed from a plan yet."
+    },
+    {
+      "id": "build",
+      "title": "Approved installation and configuration",
+      "stage": "in-development",
+      "summary": "Ember changes settings on your apps through plans you approve, with a backup, a check afterwards, and an automatic undo if it fails.",
+      "detail": "A first set of app settings works today. Installing new apps and wiring them together is planned."
+    },
+    {
+      "id": "credentials",
+      "title": "Secure credential management",
+      "stage": "implemented",
+      "summary": "API keys and passwords live in an encrypted vault on your own machine. Ember uses them through Hearth without ever seeing them.",
+      "detail": "Guided key setup exists for some apps; more are planned."
+    },
+    {
+      "id": "verification",
+      "title": "Automatic verification and recovery",
+      "stage": "in-development",
+      "summary": "Every approved change is checked afterwards and undone on its own if it doesn't work.",
+      "detail": "Built for today's repairs. Checking whole builds end to end is planned."
+    },
+    {
+      "id": "release",
+      "title": "Public release",
+      "stage": "planned",
+      "summary": "A clean, documented install anyone can run on their own hardware.",
+      "detail": "Not available to download yet. Follow along to hear when it is."
+    }
+  ],
+  "journey": {
+    "title": "Coming next: Ember builds your homelab",
+    "intro": "The goal: tell Hearth what you want, connect Ember, approve a plan, and watch Ember build and check a working homelab, without assembling it yourself.",
+    "steps": [
+      {
+        "title": "Create your account",
+        "stage": "implemented"
+      },
+      {
+        "title": "Connect your AI",
+        "stage": "implemented"
+      },
+      {
+        "title": "Tell Ember what you'd love to do",
+        "stage": "in-development"
+      },
+      {
+        "title": "Ember looks at your real setup",
+        "stage": "in-development"
+      },
+      {
+        "title": "You approve the plan",
+        "stage": "planned"
+      },
+      {
+        "title": "Ember builds it, live",
+        "stage": "planned"
+      },
+      {
+        "title": "Ember checks it all works",
+        "stage": "planned"
+      }
+    ]
+  },
+  "roadmap": {
+    "now": [
+      "Connect your AI during setup (built, in review)",
+      "Hands-on review of recently built features"
+    ],
+    "next": [
+      "Ember sets up apps you already run: accounts, keys, folders, naming, quality",
+      "A live progress view for everything Ember does",
+      "More AI providers, starting with OpenAI-compatible and local models",
+      "An overview page for every service"
+    ],
+    "later": [
+      "Installing new apps from reviewed recipes",
+      "Connecting apps to each other automatically",
+      "A public release with a guided install"
+    ]
+  }
+}

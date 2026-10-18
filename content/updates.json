@@ -1,0 +1,61 @@
+{
+  "updates": [
+    {
+      "id": "2026-10-17-connect-your-ai",
+      "date": "2026-10-17",
+      "status": "published",
+      "category": "Onboarding",
+      "title": "Connect your AI, right after you create your account",
+      "body": [
+        "Setup now goes straight from creating your account to connecting Ember's AI. Hearth only offers the services it can really connect to, explains in plain English what AI use costs, and runs a three-part test before Ember uses it: is it installed, is it signed in and answering, and can Ember use Hearth's tools through it.",
+        "You can skip it, and everything that doesn't need an AI keeps working. Close the browser halfway and setup picks up where you left off."
+      ],
+      "state": "Built and tested; in review."
+    },
+    {
+      "id": "2026-10-17-guided-build-vision",
+      "date": "2026-10-17",
+      "status": "published",
+      "category": "Roadmap",
+      "title": "Where we're headed: Ember builds your homelab",
+      "body": [
+        "We've written down the whole first-run experience we're building toward: tell Ember what you'd love to do, let it look at your real setup, approve a plan, then watch it create accounts, store keys safely, configure each app, and check that everything works.",
+        "It will be built in small steps, starting with apps you already run, and every change keeps needing your approval."
+      ],
+      "state": "Planned."
+    },
+    {
+      "id": "2026-10-16-planner-keeps-every-wish",
+      "date": "2026-10-16",
+      "status": "published",
+      "category": "Planning",
+      "title": "Plans that never quietly drop what you asked for",
+      "body": [
+        "The setup planner now keeps every wish you state. Anything it can't fit on your computer is shown with the reason, what it would take, and other ways to get it, and you choose whether to include it anyway, save it for later, or accept a substitute."
+      ],
+      "state": "Built and tested; in review."
+    },
+    {
+      "id": "2026-10-16-meet-hearth-and-ember",
+      "date": "2026-10-16",
+      "status": "published",
+      "category": "Identity",
+      "title": "Hello, Hearth. Meet Ember.",
+      "body": [
+        "The project has its name and its look: Hearth, with an ember-orange theme, and Ember, its AI administrator, shown as a living flame. You can rename Ember, choose from five voices and twenty-five looks, or use your own picture."
+      ],
+      "state": "Built and tested; in review."
+    },
+    {
+      "id": "2026-10-15-release-watch",
+      "date": "2026-10-15",
+      "status": "published",
+      "category": "Integrations",
+      "title": "Requested movies, followed until they arrive",
+      "body": [
+        "Hearth can follow the movies you request, notice when their digital release date arrives, and tell you once if something is in the way. It only reads: it never searches or downloads on its own."
+      ],
+      "state": "Built and tested; in review."
+    }
+  ]
+}
