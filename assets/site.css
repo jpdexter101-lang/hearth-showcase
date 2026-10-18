@@ -26,6 +26,8 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+/* Section links land below the sticky header. */
+main > section { scroll-margin-top: 72px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body {
   margin: 0;
