@@ -1,6 +1,20 @@
 {
   "updates": [
     {
+      "id": "2026-10-30-watch-party-banner",
+      "date": "2026-10-30",
+      "status": "published",
+      "category": "Friends and family",
+      "title": "Watch party invitations get a banner",
+      "body": [
+        "Pick a style for each watch party invitation. The new Banner style draws one picture like a streaming app's: the title, the time and your note over the movie's own backdrop, with its poster beside them. Discord shows it at the top of the post, with the details and the I'm in and Can't make it buttons below.",
+        "Cinematic, Streaming, and Compact are there too, and you can change the style later; the post on Discord updates itself. Shown here with Night of the Living Dead (1968, public domain)."
+      ],
+      "image": "movie-night-banner.png",
+      "imageAlt": "A Discord post from Hearth: a banner for Night of the Living Dead with the time and poster, then the guest list and where to watch.",
+      "state": "Released in a development build (0.40.6); waiting for a first real-world post."
+    },
+    {
       "id": "2026-10-30-home-command-center",
       "date": "2026-10-30",
       "status": "published",

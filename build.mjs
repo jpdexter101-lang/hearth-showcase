@@ -163,7 +163,7 @@ ${drafts ? '<div class="preview-bar" role="note">Local preview with draft conten
     updates.length
       ? `<ol class="updates">${updates
           .map(
-            (u) => `<li><article><p class="meta"><time datetime="${esc(u.date)}">${esc(longDate(u.date))}</time> · ${esc(u.category)}${u.status === "draft" ? ' · <span class="draft">Draft</span>' : ""}</p><h3>${esc(u.title)}</h3>${u.body.map((p) => `<p>${esc(p)}</p>`).join("")}<p class="fine">${esc(u.state)}</p></article></li>`,
+            (u) => `<li><article><p class="meta"><time datetime="${esc(u.date)}">${esc(longDate(u.date))}</time> · ${esc(u.category)}${u.status === "draft" ? ' · <span class="draft">Draft</span>' : ""}</p><h3>${esc(u.title)}</h3>${u.body.map((p) => `<p>${esc(p)}</p>`).join("")}${u.image ? `<figure class="update-shot"><a href="assets/shots/${esc(u.image)}"><img src="assets/shots/${esc(u.image)}" alt="${esc(u.imageAlt ?? u.title)}" loading="lazy"></a></figure>` : ""}<p class="fine">${esc(u.state)}</p></article></li>`,
           )
           .join("")}</ol>`
       : '<p class="sub">The first update is on its way.</p>'

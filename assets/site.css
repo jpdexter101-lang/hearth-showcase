@@ -154,6 +154,8 @@ figcaption { color: var(--faint); font-size: 0.84rem; margin-top: 10px; }
 .updates .meta { color: var(--faint); font-size: 0.84rem; margin-bottom: 6px; }
 .updates p { color: var(--muted); }
 .updates .fine { margin: 0; }
+.update-shot { margin: 14px 0; }
+.update-shot img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); }
 .draft { color: var(--amber); font-weight: 600; }
 
 .follow { text-align: center; }
