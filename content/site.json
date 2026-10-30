@@ -100,9 +100,14 @@
       "caption": "When a movie or show lands in Plex or Jellyfin, Hearth posts it to your friends' Discord with its details and trailer. Here, Spider-Man: Brand New Day."
     },
     {
-      "file": "movie-night.png",
-      "title": "Watch parties",
-      "caption": "Pick a movie and a time, add a note and where to watch, and Hearth posts the invitation with reminders. Friends answer I'm in or Can't make it."
+      "file": "movie-night-banner.png",
+      "title": "Watch parties, with a banner",
+      "caption": "Pick a movie and a time, and Hearth posts the invitation with reminders. The Banner style draws the title, time and poster over the movie's backdrop, like a streaming app."
+    },
+    {
+      "file": "movie-night-streaming.png",
+      "title": "Pick the look",
+      "caption": "Banner, Cinematic, Streaming, or Compact. Streaming puts a wide picture under the invitation. Friends answer I'm in or Can't make it."
     },
     {
       "file": "movie-night-posted.png",
