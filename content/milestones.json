@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-10-17",
+  "asOf": "2026-10-30",
   "stages": [
     {
       "id": "planned",
@@ -32,36 +32,36 @@
       "id": "interface",
       "title": "Core Hearth interface",
       "stage": "implemented",
-      "summary": "Home, services, projects, to-dos, saved work, storage, and settings in one place, on desktop and phone.",
-      "detail": "An earlier version runs every day on our own test homelab. Most pieces are still waiting for the owner's final hands-on sign-off."
+      "summary": "Home, services, projects, to-dos, saved work, storage, and settings in one place, on desktop, phone, and an Android app.",
+      "detail": "Home is now one screen with Ember in the middle and your projects around it. Most pieces are still waiting for the owner's final hands-on sign-off."
     },
     {
       "id": "ember",
       "title": "Ember, the AI administrator",
       "stage": "implemented",
-      "summary": "Ember looks into problems with Hearth's own tools, explains what it found, and proposes fixes you approve.",
-      "detail": "Works through Claude Code today. Ember never gets a shell, your files, or your passwords."
+      "summary": "Ember is a full AI coding agent that knows your homelab: it investigates, explains, remembers, and fixes things with you.",
+      "detail": "Anything that changes a system is a plan you approve. An optional Full access mode skips routine questions but still asks before anything destructive. Your passwords and keys stay in Hearth's vault; Ember uses them without ever seeing them."
     },
     {
       "id": "monitoring",
       "title": "Service discovery and monitoring",
       "stage": "implemented",
-      "summary": "Finds the containers and apps on a machine, watches their health, and reads inside common apps like the *arr apps, Plex, and qBittorrent.",
-      "detail": "Other machines are watched over the network today; deeper checks there are planned."
+      "summary": "Finds the containers and apps on a machine, watches their health, and shows a live panel for each app, from the *arr apps and Plex to qBittorrent, Home Assistant, and more.",
+      "detail": "Every PC that runs Hearth watches its own services, and you see them all from one account."
     },
     {
       "id": "onboarding",
       "title": "Guided first-run setup",
       "stage": "in-development",
       "summary": "Create your account, connect an AI, and make Ember your own, in one guided flow that picks up where you left off.",
-      "detail": "Account setup and personalization are built. The Connect your AI step is built and in review."
+      "detail": "Account setup, personalization, and Connect your AI are built and in review."
     },
     {
       "id": "providers",
       "title": "Choice of AI provider",
-      "stage": "in-development",
-      "summary": "Use the AI you already have. Claude Code works today; Codex, OpenAI-compatible services, and local models through Ollama are planned.",
-      "detail": "Each provider must be limited to Hearth's own tools before it is offered."
+      "stage": "implemented",
+      "summary": "Use the AI you already have: Claude Code, Codex, or a local model through Ollama.",
+      "detail": "Each one gets the same access and the same approval rules. Built and tested; waiting for hands-on review."
     },
     {
       "id": "planning",
@@ -75,14 +75,14 @@
       "title": "Approved installation and configuration",
       "stage": "in-development",
       "summary": "Ember changes settings on your apps through plans you approve, with a backup, a check afterwards, and an automatic undo if it fails.",
-      "detail": "A first set of app settings works today. Installing new apps and wiring them together is planned."
+      "detail": "Ember can change settings in any connected app through plans you approve. Installing new apps and wiring them together is planned."
     },
     {
       "id": "credentials",
       "title": "Secure credential management",
       "stage": "implemented",
       "summary": "API keys and passwords live in an encrypted vault on your own machine. Ember uses them through Hearth without ever seeing them.",
-      "detail": "Guided key setup exists for some apps; more are planned."
+      "detail": "Ember sets up keys for the apps it connects to; you only approve or sign in."
     },
     {
       "id": "verification",
@@ -135,13 +135,12 @@
   },
   "roadmap": {
     "now": [
-      "Connect your AI during setup (built, in review)",
-      "Hands-on review of recently built features"
+      "Hands-on review of recently built features",
+      "A movable, resizable Ember chat window"
     ],
     "next": [
       "Ember sets up apps you already run: accounts, keys, folders, naming, quality",
       "A live progress view for everything Ember does",
-      "More AI providers, starting with OpenAI-compatible and local models",
       "An overview page for every service"
     ],
     "later": [

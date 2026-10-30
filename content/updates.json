@@ -1,6 +1,75 @@
 {
   "updates": [
     {
+      "id": "2026-10-30-home-command-center",
+      "date": "2026-10-30",
+      "status": "published",
+      "category": "Interface",
+      "title": "A new Home: Ember in the middle, everything on one screen",
+      "body": [
+        "Home now fits on one screen. Ember sits in the middle with your active projects around it, what needs you is a row of small buttons along the top, and your homelab's vital signs sit below.",
+        "Ember's chat window now stays open as you move between pages, so you can keep talking while you open a setting or a service. And any service that is down has an Ask Ember why button."
+      ],
+      "state": "Built and tested; in review."
+    },
+    {
+      "id": "2026-10-30-torrent-cleanup",
+      "date": "2026-10-30",
+      "status": "published",
+      "category": "Integrations",
+      "title": "Clear out dead torrents properly",
+      "body": [
+        "A stalled torrent with no seeders can now be removed from qBittorrent together with the data it left behind. Like every change, it is a plan you approve first, and the plan says plainly that the deletion is permanent."
+      ],
+      "state": "Built and tested; in review."
+    },
+    {
+      "id": "2026-10-28-storage-raid",
+      "date": "2026-10-28",
+      "status": "published",
+      "category": "Storage",
+      "title": "Storage and RAID you can understand",
+      "body": [
+        "The Storage page shows every drive's health and temperature and explains your arrays in plain words: mdadm, ZFS, Btrfs, SnapRAID, and Windows Storage Spaces. When a disk fails, it tells you what that means and what to do next."
+      ],
+      "state": "Built and tested; in review."
+    },
+    {
+      "id": "2026-10-27-choose-your-ai",
+      "date": "2026-10-27",
+      "status": "published",
+      "category": "AI",
+      "title": "Bring your own AI: Claude Code, Codex, or a local model",
+      "body": [
+        "Ember can now run on Claude Code, Codex, or a model on your own hardware through Ollama. Whichever you pick gets the same tools, the same memory of your homelab, and the same approval rules.",
+        "The War Room is where you work with it on bigger jobs, with your projects from every PC in one place."
+      ],
+      "state": "Built and tested; in review."
+    },
+    {
+      "id": "2026-10-26-voice",
+      "date": "2026-10-26",
+      "status": "published",
+      "category": "Voice",
+      "title": "Talk to Ember out loud",
+      "body": [
+        "Ember can speak with a built-in voice that needs no setup, and you can dictate instead of typing. If you have a spare machine with a graphics card, Hearth can set it up as a speech machine for more natural voices."
+      ],
+      "state": "Built and tested; in review."
+    },
+    {
+      "id": "2026-10-23-every-pc",
+      "date": "2026-10-23",
+      "status": "published",
+      "category": "Multi-PC",
+      "title": "One account across all your PCs, on Linux and Windows",
+      "body": [
+        "Hearth runs on each PC you own, Linux or Windows, and they join together under one account with a pairing code. Each PC watches its own services, and you see and manage all of them from any of them, or from your phone.",
+        "Updates are offered, never forced: Hearth tells you a new version is out and you update when you are ready."
+      ],
+      "state": "Built and tested; in review."
+    },
+    {
       "id": "2026-10-17-connect-your-ai",
       "date": "2026-10-17",
       "status": "published",

@@ -4,7 +4,49 @@
   <link href="https://jpdexter101-lang.github.io/hearth-showcase/"/>
   <link rel="self" href="https://jpdexter101-lang.github.io/hearth-showcase/feed.xml"/>
   <id>https://jpdexter101-lang.github.io/hearth-showcase/</id>
-  <updated>2026-10-17T00:00:00Z</updated>
+  <updated>2026-10-30T00:00:00Z</updated>
+  <entry>
+    <title>A new Home: Ember in the middle, everything on one screen</title>
+    <id>https://jpdexter101-lang.github.io/hearth-showcase/#2026-10-30-home-command-center</id>
+    <link href="https://jpdexter101-lang.github.io/hearth-showcase/#updates"/>
+    <updated>2026-10-30T00:00:00Z</updated>
+    <summary>Home now fits on one screen. Ember sits in the middle with your active projects around it, what needs you is a row of small buttons along the top, and your homelab&#39;s vital signs sit below. Ember&#39;s chat window now stays open as you move between pages, so you can keep talking while you open a setting or a service. And any service that is down has an Ask Ember why button.</summary>
+  </entry>
+  <entry>
+    <title>Clear out dead torrents properly</title>
+    <id>https://jpdexter101-lang.github.io/hearth-showcase/#2026-10-30-torrent-cleanup</id>
+    <link href="https://jpdexter101-lang.github.io/hearth-showcase/#updates"/>
+    <updated>2026-10-30T00:00:00Z</updated>
+    <summary>A stalled torrent with no seeders can now be removed from qBittorrent together with the data it left behind. Like every change, it is a plan you approve first, and the plan says plainly that the deletion is permanent.</summary>
+  </entry>
+  <entry>
+    <title>Storage and RAID you can understand</title>
+    <id>https://jpdexter101-lang.github.io/hearth-showcase/#2026-10-28-storage-raid</id>
+    <link href="https://jpdexter101-lang.github.io/hearth-showcase/#updates"/>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <summary>The Storage page shows every drive&#39;s health and temperature and explains your arrays in plain words: mdadm, ZFS, Btrfs, SnapRAID, and Windows Storage Spaces. When a disk fails, it tells you what that means and what to do next.</summary>
+  </entry>
+  <entry>
+    <title>Bring your own AI: Claude Code, Codex, or a local model</title>
+    <id>https://jpdexter101-lang.github.io/hearth-showcase/#2026-10-27-choose-your-ai</id>
+    <link href="https://jpdexter101-lang.github.io/hearth-showcase/#updates"/>
+    <updated>2026-10-27T00:00:00Z</updated>
+    <summary>Ember can now run on Claude Code, Codex, or a model on your own hardware through Ollama. Whichever you pick gets the same tools, the same memory of your homelab, and the same approval rules. The War Room is where you work with it on bigger jobs, with your projects from every PC in one place.</summary>
+  </entry>
+  <entry>
+    <title>Talk to Ember out loud</title>
+    <id>https://jpdexter101-lang.github.io/hearth-showcase/#2026-10-26-voice</id>
+    <link href="https://jpdexter101-lang.github.io/hearth-showcase/#updates"/>
+    <updated>2026-10-26T00:00:00Z</updated>
+    <summary>Ember can speak with a built-in voice that needs no setup, and you can dictate instead of typing. If you have a spare machine with a graphics card, Hearth can set it up as a speech machine for more natural voices.</summary>
+  </entry>
+  <entry>
+    <title>One account across all your PCs, on Linux and Windows</title>
+    <id>https://jpdexter101-lang.github.io/hearth-showcase/#2026-10-23-every-pc</id>
+    <link href="https://jpdexter101-lang.github.io/hearth-showcase/#updates"/>
+    <updated>2026-10-23T00:00:00Z</updated>
+    <summary>Hearth runs on each PC you own, Linux or Windows, and they join together under one account with a pairing code. Each PC watches its own services, and you see and manage all of them from any of them, or from your phone. Updates are offered, never forced: Hearth tells you a new version is out and you update when you are ready.</summary>
+  </entry>
   <entry>
     <title>Connect your AI, right after you create your account</title>
     <id>https://jpdexter101-lang.github.io/hearth-showcase/#2026-10-17-connect-your-ai</id>
