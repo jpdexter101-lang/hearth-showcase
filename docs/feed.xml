@@ -48,6 +48,13 @@
     <summary>Hearth runs on each PC you own, Linux or Windows, and they join together under one account with a pairing code. Each PC watches its own services, and you see and manage all of them from any of them, or from your phone. Updates are offered, never forced: Hearth tells you a new version is out and you update when you are ready.</summary>
   </entry>
   <entry>
+    <title>Ember can install new apps, not just fix them</title>
+    <id>https://jpdexter101-lang.github.io/hearth-showcase/#2026-10-19-ember-installs-apps</id>
+    <link href="https://jpdexter101-lang.github.io/hearth-showcase/#updates"/>
+    <updated>2026-10-19T00:00:00Z</updated>
+    <summary>Ember can now add a new app to your homelab as its own Docker Compose project, update an app to a newer version, or remove one while keeping its files and data. Each is a plan you approve first. Hearth checks every change afterwards, on the containers and on the app itself, and puts things back on its own if the check fails. Building a whole homelab from your starter plan in one guided run is the next step.</summary>
+  </entry>
+  <entry>
     <title>Connect your AI, right after you create your account</title>
     <id>https://jpdexter101-lang.github.io/hearth-showcase/#2026-10-17-connect-your-ai</id>
     <link href="https://jpdexter101-lang.github.io/hearth-showcase/#updates"/>

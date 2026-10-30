@@ -52,9 +52,9 @@
     {
       "id": "onboarding",
       "title": "Guided first-run setup",
-      "stage": "in-development",
+      "stage": "implemented",
       "summary": "Create your account, connect an AI, and make Ember your own, in one guided flow that picks up where you left off.",
-      "detail": "Account setup, personalization, and Connect your AI are built and in review."
+      "detail": "Account, personalization, and Connect your AI (Claude Code, Codex, or Ollama) are built and tested; waiting for hands-on review."
     },
     {
       "id": "providers",
@@ -68,14 +68,14 @@
       "title": "AI-assisted homelab planning",
       "stage": "implemented",
       "summary": "Answer a few plain questions, let Hearth look at your computer (only if you say yes), and get a starter plan that fits it.",
-      "detail": "Plans only for now: nothing is installed from a plan yet."
+      "detail": "Built and tested. The plan is not handed to Ember to build in one go yet."
     },
     {
       "id": "build",
       "title": "Approved installation and configuration",
       "stage": "in-development",
-      "summary": "Ember changes settings on your apps through plans you approve, with a backup, a check afterwards, and an automatic undo if it fails.",
-      "detail": "Ember can change settings in any connected app through plans you approve. Installing new apps and wiring them together is planned."
+      "summary": "Ember installs new apps and changes settings on your apps through plans you approve, with a backup, a check afterwards, and an automatic undo if it fails.",
+      "detail": "Ember can install a new app, change settings, and connect apps through their own APIs, one approved plan at a time. Building your whole starter plan in one guided run is still in development."
     },
     {
       "id": "credentials",
@@ -87,9 +87,9 @@
     {
       "id": "verification",
       "title": "Automatic verification and recovery",
-      "stage": "in-development",
+      "stage": "implemented",
       "summary": "Every approved change is checked afterwards and undone on its own if it doesn't work.",
-      "detail": "Built for today's repairs. Checking whole builds end to end is planned."
+      "detail": "Every change, including a new install, is checked and put back if it fails. A final check across a whole build is still to come."
     },
     {
       "id": "release",
@@ -100,8 +100,8 @@
     }
   ],
   "journey": {
-    "title": "Coming next: Ember builds your homelab",
-    "intro": "The goal: tell Hearth what you want, connect Ember, approve a plan, and watch Ember build and check a working homelab, without assembling it yourself.",
+    "title": "Ember builds your homelab",
+    "intro": "Tell Hearth what you want, connect Ember, approve a plan, and watch Ember build and check a working homelab. Ember can already install and set up apps one approved plan at a time; turning your starter plan into one guided build is what is left.",
     "steps": [
       {
         "title": "Create your account",
@@ -113,23 +113,23 @@
       },
       {
         "title": "Tell Ember what you'd love to do",
-        "stage": "in-development"
+        "stage": "implemented"
       },
       {
         "title": "Ember looks at your real setup",
-        "stage": "in-development"
+        "stage": "implemented"
       },
       {
         "title": "You approve the plan",
-        "stage": "planned"
+        "stage": "implemented"
       },
       {
         "title": "Ember builds it, live",
-        "stage": "planned"
+        "stage": "in-development"
       },
       {
         "title": "Ember checks it all works",
-        "stage": "planned"
+        "stage": "in-development"
       }
     ]
   },
@@ -139,13 +139,13 @@
       "A movable, resizable Ember chat window"
     ],
     "next": [
-      "Ember sets up apps you already run: accounts, keys, folders, naming, quality",
-      "A live progress view for everything Ember does",
-      "An overview page for every service"
+      "Your starter plan becomes one guided build Ember runs for you",
+      "Ember sets up app accounts and keys as part of a build",
+      "A live progress view for everything Ember does"
     ],
     "later": [
-      "Installing new apps from reviewed recipes",
-      "Connecting apps to each other automatically",
+      "A final check and summary after every build",
+      "A dedicated panel for every remaining service",
       "A public release with a guided install"
     ]
   }

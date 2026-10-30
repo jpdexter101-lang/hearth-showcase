@@ -45,7 +45,7 @@ const html = `<!doctype html>
 <meta name="referrer" content="no-referrer">
 <meta property="og:title" content="${esc(site.name)}: ${esc(site.tagline)}">
 <meta property="og:description" content="${esc(site.description)}">
-<meta property="og:image" content="${esc(site.siteUrl)}assets/shots/hearth-home.png">
+<meta property="og:image" content="${esc(site.siteUrl)}assets/shots/home.png">
 <link rel="icon" href="assets/img/favicon.png">
 <link rel="alternate" type="application/atom+xml" title="Hearth development updates" href="feed.xml">
 <link rel="stylesheet" href="assets/site.css">
@@ -73,7 +73,7 @@ ${drafts ? '<div class="preview-bar" role="note">Local preview with draft conten
     </div>
   </div>
   <figure class="hero-shot">
-    <img src="assets/shots/hearth-home.png" alt="Hearth's Home page: a getting-started list beside a sidebar of services" width="1440" height="900">
+    <img src="assets/shots/home.png" alt="Hearth's Home page: Ember in the middle with active projects around it" width="1440" height="900">
     <figcaption>The real Hearth interface, shown with sample data.</figcaption>
   </figure>
 </section>

@@ -34,13 +34,13 @@
     },
     {
       "step": "Execute",
-      "stage": "in-development",
-      "note": "Restarts, repairs, and settings in any connected app, through plans you approve. Installing apps is planned."
+      "stage": "implemented",
+      "note": "Installs, restarts, repairs, and settings in any connected app, through plans you approve."
     },
     {
       "step": "Verify",
-      "stage": "in-development",
-      "note": "Every change is checked, and undone on its own if it fails. Whole-build checks are planned."
+      "stage": "implemented",
+      "note": "Every change is checked afterwards, and undone on its own if it fails."
     },
     {
       "step": "Remember",
@@ -50,14 +50,59 @@
   ],
   "screens": [
     {
-      "file": "hearth-home.png",
+      "file": "home.png",
       "title": "Home",
-      "caption": "Your homelab at a glance, with a getting-started list built from what is really there."
+      "caption": "Ember in the middle, your active projects around it, what needs you in one row, and your homelab's vital signs below. All on one screen."
     },
     {
-      "file": "home-hub.png",
-      "title": "Ember at the center",
-      "caption": "Ask Ember anything from Home, beside your projects and an at-a-glance view of your homelab."
+      "file": "home-ember.png",
+      "title": "Ember goes where you go",
+      "caption": "Ember's chat stays open as you move between pages, so you can keep talking while you check a service or a setting."
+    },
+    {
+      "file": "panel-qbittorrent.png",
+      "title": "The Lair: a panel for each app",
+      "caption": "Open any app beside Ember. qBittorrent shows stalled and broken torrents first, each with the repairs that fit it."
+    },
+    {
+      "file": "panel-sonarr.png",
+      "title": "Sonarr, explained",
+      "caption": "Stuck and failed downloads named with the app's own reason, and one-click Import or Search, each a plan you approve."
+    },
+    {
+      "file": "panel-plex.png",
+      "title": "Who is watching what",
+      "caption": "Plex libraries and live streams: direct play or transcode, buffering, and an Ask Ember button on every stream."
+    },
+    {
+      "file": "wizarr.png",
+      "title": "Invite friends and family",
+      "caption": "Create Wizarr invitations, choose libraries and how long access lasts, and see who has used them, without leaving Hearth."
+    },
+    {
+      "file": "storage.png",
+      "title": "Storage & Files",
+      "caption": "Every drive with its health and temperature, plus files, recent downloads, file journeys, and RAID arrays."
+    },
+    {
+      "file": "war-room.png",
+      "title": "The War Room",
+      "caption": "Your projects with Claude Code, Codex, or a local Ollama model: a terminal, a task queue, files, and a kill switch."
+    },
+    {
+      "file": "notifications.png",
+      "title": "Notifications",
+      "caption": "Email, Discord, ntfy, or a webhook. Hearth writes only when something matters and says whether you need to act."
+    },
+    {
+      "file": "settings-ember.png",
+      "title": "Make Ember your own",
+      "caption": "Rename your AI, pick a built-in voice or your own speech machine, and choose how much it may do on its own."
+    },
+    {
+      "file": "plan.png",
+      "title": "Plan your first homelab",
+      "caption": "Pick what sounds fun in plain words. Hearth looks at your computer, only if you say yes, and explains every option."
     },
     {
       "file": "plan-6-plan.png",
