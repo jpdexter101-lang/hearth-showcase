@@ -27,6 +27,20 @@
     <summary>The Storage page shows every drive&#39;s health and temperature and explains your arrays in plain words: mdadm, ZFS, Btrfs, SnapRAID, and Windows Storage Spaces. When a disk fails, it tells you what that means and what to do next.</summary>
   </entry>
   <entry>
+    <title>Movie nights: plan a watch party in Hearth</title>
+    <id>https://jpdexter101-lang.github.io/hearth-showcase/#2026-10-28-movie-nights</id>
+    <link href="https://jpdexter101-lang.github.io/hearth-showcase/#updates"/>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <summary>Pick a movie from your library and a time, add a note and where to watch (Watch Together in the Plezy app, Jellyfin SyncPlay, or come over), and Hearth posts the invitation to your friends, with reminders before it starts. Posted by a Discord bot, the invitation has I&#39;m in and Can&#39;t make it buttons, and the guest list keeps itself. Change the time or add a room code and everyone gets the update; cancel it and they hear that too.</summary>
+  </entry>
+  <entry>
+    <title>Tell your friends when something new arrives</title>
+    <id>https://jpdexter101-lang.github.io/hearth-showcase/#2026-10-28-new-in-your-library</id>
+    <link href="https://jpdexter101-lang.github.io/hearth-showcase/#updates"/>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <summary>When a movie or show becomes available in Plex or Jellyfin, not just downloaded, Hearth can announce it to a friends and family channel with its poster, details, and trailer. You design the post and see exactly how Discord will show it. What is already in your library is never announced, and a test message always says it is a test. Add Discord in two clicks with the official Hearth bot, or set up your own bot step by step.</summary>
+  </entry>
+  <entry>
     <title>Bring your own AI: Claude Code, Codex, or a local model</title>
     <id>https://jpdexter101-lang.github.io/hearth-showcase/#2026-10-27-choose-your-ai</id>
     <link href="https://jpdexter101-lang.github.io/hearth-showcase/#updates"/>

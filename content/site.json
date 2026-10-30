@@ -95,6 +95,21 @@
       "caption": "Email, Discord, ntfy, or a webhook. Hearth writes only when something matters and says whether you need to act."
     },
     {
+      "file": "announce.png",
+      "title": "Tell friends what is new",
+      "caption": "When a movie or show lands in Plex or Jellyfin, Hearth posts it to your friends' Discord with its details and trailer. Here, Spider-Man: Brand New Day."
+    },
+    {
+      "file": "movie-night.png",
+      "title": "Watch parties",
+      "caption": "Pick a movie and a time, add a note and where to watch, and Hearth posts the invitation with reminders. Friends answer I'm in or Can't make it."
+    },
+    {
+      "file": "discord-bot.png",
+      "title": "Your own Discord bot",
+      "caption": "Set up step by step in about two minutes. The token goes into Hearth's vault and is never shown again."
+    },
+    {
       "file": "settings-ember.png",
       "title": "Make Ember your own",
       "caption": "Rename your AI, pick a built-in voice or your own speech machine, and choose how much it may do on its own."
