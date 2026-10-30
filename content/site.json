@@ -105,6 +105,11 @@
       "caption": "Pick a movie and a time, add a note and where to watch, and Hearth posts the invitation with reminders. Friends answer I'm in or Can't make it."
     },
     {
+      "file": "movie-night-posted.png",
+      "title": "Planned, with a guest list",
+      "caption": "The watch party, who is coming, and spots left. Change the time, add a room code, or cancel it, and everyone invited hears about it."
+    },
+    {
       "file": "hearth-bot-add.png",
       "title": "Add Discord in one click",
       "caption": "Add a destination, choose the Hearth bot, and pick who reads it. A friends and family channel only ever gets media announcements, never system alerts."
@@ -113,6 +118,11 @@
       "file": "hearth-bot-setup.png",
       "title": "The Hearth bot, no token needed",
       "caption": "Add Hearth to your Discord server, pick the channel, and you are done. Movie night invitations get I'm in and Can't make it buttons."
+    },
+    {
+      "file": "discord-bot.png",
+      "title": "Or use your own Discord bot",
+      "caption": "Prefer your own? Set it up step by step in about two minutes. Its token goes into Hearth's vault and is never shown again."
     },
     {
       "file": "settings-ember.png",
