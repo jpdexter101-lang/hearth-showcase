@@ -40,7 +40,7 @@
       "title": "Ember, the AI administrator",
       "stage": "implemented",
       "summary": "Ember is a full AI coding agent that knows your homelab: it investigates, explains, remembers, and fixes things with you.",
-      "detail": "You choose what Ember asks permission for. By default, anything that changes a system is a plan you approve. With Full access on, it works like Claude Code on its own and asks first only before steps with serious consequences, like deleting data. Through Hearth's tools, Ember uses your passwords and keys without seeing them."
+      "detail": "You choose what Ember asks permission for: every change (the default), risky steps, or only steps with serious consequences, like deleting data. Through Hearth's tools, Ember uses your passwords and keys without seeing them."
     },
     {
       "id": "monitoring",

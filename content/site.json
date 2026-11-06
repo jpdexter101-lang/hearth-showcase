@@ -30,7 +30,7 @@
     {
       "step": "Approve",
       "stage": "implemented",
-      "note": "You choose what needs your OK: every change (the default), or with Full access, only steps with serious consequences."
+      "note": "You choose what needs your OK: every change, risky steps, or only steps with serious consequences."
     },
     {
       "step": "Execute",
@@ -260,7 +260,7 @@
   "emberIntro": [
     "Ember is Hearth's AI. It doesn't stop at answering questions: it looks into what's really happening on your machines, explains it in plain words, and fixes things.",
     "Ember is the AI you connect: Claude Code, Codex, or a local model through Ollama, with everything that AI can do. Hearth doesn't hold it back. You only decide what it asks your permission for before it acts.",
-    "By default, it asks before every change: each one is a plan you approve. Turn on Full access and it works the way Claude Code does on its own, asking first only before steps with serious consequences, like deleting data, changing networking, or using sudo."
+    "You pick one of three: ask before every change (the default), ask before risky steps like restarts, app settings, or installs, or ask only before steps with serious consequences, like deleting data, changing networking, or using sudo. Ember asks in its reply and goes on after you say yes."
   ],
   "workflow": {
     "title": "One fix, start to finish",
