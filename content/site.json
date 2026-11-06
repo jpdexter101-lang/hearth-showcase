@@ -52,117 +52,153 @@
     {
       "file": "home.png",
       "title": "Home",
-      "caption": "Ember in the middle, your active projects around it, what needs you in one row, and your homelab's vital signs below. All on one screen."
-    },
-    {
-      "file": "home-ember.png",
-      "title": "Ember goes where you go",
-      "caption": "Ember's chat stays open as you move between pages, so you can keep talking while you check a service or a setting."
+      "caption": "Ember, the AI, in the middle, your active projects around it, what needs you in one row, and your homelab's vital signs below. All on one screen.",
+      "w": 1440,
+      "h": 900,
+      "featured": true
     },
     {
       "file": "home-wall.png",
       "title": "A home dashboard for your wall",
-      "caption": "Hearth turns Home Assistant into a full-screen dashboard for a wall tablet or a spare screen: the time written out, the weather with a sky that matches outside, what's playing, today's calendar, shopping lists and scenes."
+      "caption": "Hearth turns Home Assistant into a full-screen dashboard for a wall tablet or a spare screen: the time written out, the weather with a sky that matches outside, what's playing, today's calendar, shopping lists and scenes.",
+      "w": 1440,
+      "h": 900,
+      "featured": true
     },
     {
       "file": "home-weather.png",
       "title": "The forecast, one tap away",
-      "caption": "The next hours and the next days, from Home Assistant or a free weather service for your town."
+      "caption": "The next hours and the next days, from Home Assistant or a free weather service for your town.",
+      "w": 1440,
+      "h": 900
     },
     {
       "file": "home-phone.png",
       "title": "The same home on your phone",
-      "caption": "Pair a phone or tablet and it opens straight to the home dashboard, with Rooms, Media, Security and Household a tap away."
+      "caption": "Pair a phone or tablet and it opens straight to the home dashboard, with Rooms, Media, Security and Household a tap away.",
+      "w": 1082,
+      "h": 2202
     },
     {
       "file": "panel-qbittorrent.png",
       "title": "The Lair: a panel for each app",
-      "caption": "Open any app beside Ember. qBittorrent shows stalled and broken torrents first, each with the repairs that fit it."
+      "caption": "Open any app beside Ember. With branding on, each panel wears its app's own colors. qBittorrent shows stalled and broken torrents first, each with the repairs that fit it.",
+      "w": 1440,
+      "h": 900
     },
     {
       "file": "panel-sonarr.png",
       "title": "Sonarr, explained",
-      "caption": "Stuck and failed downloads named with the app's own reason, and one-click Import or Search, each a plan you approve."
+      "caption": "Stuck and failed downloads named with the app's own reason, and one-click Import or Search, each a plan you approve.",
+      "w": 1440,
+      "h": 900,
+      "featured": true
     },
     {
       "file": "panel-plex.png",
       "title": "Who is watching what",
-      "caption": "Plex libraries and live streams: direct play or transcode, buffering, and an Ask Ember button on every stream."
-    },
-    {
-      "file": "wizarr.png",
-      "title": "Invite friends and family",
-      "caption": "Create Wizarr invitations, choose libraries and how long access lasts, and see who has used them, without leaving Hearth."
+      "caption": "Plex libraries and live streams: direct play or transcode, buffering, and an Ask Ember button on every stream.",
+      "w": 1440,
+      "h": 900
     },
     {
       "file": "storage.png",
       "title": "Storage & Files",
-      "caption": "Every drive with its health and temperature, plus files, recent downloads, file journeys, and RAID arrays."
+      "caption": "Every drive with its health and temperature, plus files, recent downloads, file journeys, and RAID arrays.",
+      "w": 1440,
+      "h": 900
     },
     {
       "file": "war-room.png",
       "title": "The War Room",
-      "caption": "Your projects with Claude Code, Codex, or a local Ollama model: a terminal, a task queue, files, and a kill switch."
+      "caption": "Your projects with Claude Code, Codex, or a local Ollama model: a terminal, a task queue, files, and a kill switch.",
+      "w": 1440,
+      "h": 900
     },
     {
       "file": "notifications.png",
       "title": "Notifications",
-      "caption": "Email, Discord, ntfy, or a webhook. Hearth writes only when something matters and says whether you need to act."
+      "caption": "Email, Discord, ntfy, or a webhook. Hearth writes only when something matters and says whether you need to act.",
+      "w": 1440,
+      "h": 900
     },
     {
       "file": "announce.png",
       "title": "Tell friends what is new",
-      "caption": "When a movie or show lands in Plex or Jellyfin, Hearth posts it to your friends' Discord with its poster, details and trailer. Shown with Night of the Living Dead (1968, public domain)."
+      "caption": "When a movie or show lands in Plex or Jellyfin, Hearth posts it to your friends' Discord with its poster, details and trailer. Shown with Night of the Living Dead (1968, public domain).",
+      "w": 2880,
+      "h": 1800
     },
     {
       "file": "movie-night-banner.png",
       "title": "Watch parties, with a banner",
-      "caption": "The Banner style: Hearth draws the title, time and your note over the movie's own backdrop, with its poster beside them, then the RSVP card. Night of the Living Dead (1968, public domain)."
+      "caption": "The Banner style: Hearth draws the title, time and your note over the movie's own backdrop, with its poster beside them, then the RSVP card. Night of the Living Dead (1968, public domain).",
+      "w": 1440,
+      "h": 900
     },
     {
       "file": "movie-night-streaming.png",
       "title": "Pick the look",
-      "caption": "Banner, Cinematic, Streaming, or Compact. Streaming puts the movie's backdrop under the invitation. Friends answer I'm in or Can't make it."
+      "caption": "Banner, Cinematic, Streaming, or Compact. Streaming puts the movie's backdrop under the invitation. Friends answer I'm in or Can't make it.",
+      "w": 2880,
+      "h": 1800
     },
     {
       "file": "movie-night-posted.png",
       "title": "Planned, with a guest list",
-      "caption": "The watch party, who is coming, and spots left. Change the time, add a room code, or cancel it, and everyone invited hears about it."
+      "caption": "The watch party, who is coming, and spots left. Change the time, add a room code, or cancel it, and everyone invited hears about it.",
+      "w": 2880,
+      "h": 1800
     },
     {
       "file": "hearth-bot-add.png",
       "title": "Add Discord in one click",
-      "caption": "Add a destination, choose the Hearth bot, and pick who reads it. A friends and family channel only ever gets media announcements, never system alerts."
+      "caption": "Add a destination, choose the Hearth bot, and pick who reads it. A friends and family channel only ever gets media announcements, never system alerts.",
+      "w": 1440,
+      "h": 900
     },
     {
       "file": "hearth-bot-setup.png",
       "title": "The Hearth bot, no token needed",
-      "caption": "Add Hearth to your Discord server, pick the channel, and you are done. Movie night invitations get I'm in and Can't make it buttons."
+      "caption": "Add Hearth to your Discord server, pick the channel, and you are done. Movie night invitations get I'm in and Can't make it buttons.",
+      "w": 1440,
+      "h": 900
     },
     {
       "file": "discord-bot.png",
       "title": "Or use your own Discord bot",
-      "caption": "Prefer your own? Set it up step by step in about two minutes. Its token goes into Hearth's vault and is never shown again."
+      "caption": "Prefer your own? Set it up step by step in about two minutes. Its token goes into Hearth's vault and is never shown again.",
+      "w": 1440,
+      "h": 900
     },
     {
       "file": "settings-ember.png",
       "title": "Make Ember your own",
-      "caption": "Rename your AI, pick a built-in voice or your own speech machine, and choose how much it may do on its own."
+      "caption": "Rename your AI, pick a built-in voice or your own speech machine, and choose how much it may do on its own.",
+      "w": 1440,
+      "h": 900
     },
     {
       "file": "plan.png",
       "title": "Plan your first homelab",
-      "caption": "Pick what sounds fun in plain words. Hearth looks at your computer, only if you say yes, and explains every option."
+      "caption": "Pick what sounds fun in plain words. Hearth looks at your computer, only if you say yes, and explains every option.",
+      "w": 1440,
+      "h": 900
     },
     {
       "file": "plan-6-plan.png",
       "title": "A plan that fits your computer",
-      "caption": "Every app explained: what it does, why it was picked, what it costs, and whether it runs comfortably on your machine."
+      "caption": "Every app explained: what it does, why it was picked, what it costs, and whether it runs comfortably on your machine.",
+      "w": 1440,
+      "h": 900,
+      "featured": true
     },
     {
       "file": "job-review.png",
       "title": "You approve the exact plan",
-      "caption": "Each step says how it will be checked and what happens if a later step fails. Approval covers this plan, once."
+      "caption": "Each step says how it will be checked and what happens if a later step fails. Approval covers this plan, once.",
+      "w": 1440,
+      "h": 900
     }
   ],
   "concept": {

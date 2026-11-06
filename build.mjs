@@ -35,6 +35,9 @@ const counts = stages
   .map((s) => `<li><strong>${s.n}</strong> ${esc(s.label.toLowerCase())}</li>`)
   .join("");
 
+const figure = (s) =>
+  `<figure class="shot"><a href="assets/shots/${esc(s.file)}"><img src="assets/shots/${esc(s.file)}" alt="${esc(s.title)}: ${esc(s.caption)}" width="${s.w ?? 1440}" height="${s.h ?? 900}" loading="lazy"></a><figcaption><strong>${esc(s.title)}</strong> ${esc(s.caption)}</figcaption></figure>`;
+
 const html = `<!doctype html>
 <html lang="en">
 <head>
@@ -57,7 +60,7 @@ ${drafts ? '<div class="preview-bar" role="note">Local preview with draft conten
 <header class="top">
   <a class="brand" href="#top"><img src="assets/img/hearth-mark.png" alt="" width="36" height="36"><span>hearth</span></a>
   <nav aria-label="Sections">
-    <a href="#ember">Ember</a><a href="#preview">Preview</a><a href="#progress">Progress</a><a href="#roadmap">Roadmap</a><a href="#pricing">Pricing</a><a href="#updates">Updates</a><a href="#follow" class="nav-cta">Follow</a>
+    <a href="#ember">Ember</a><a href="#preview">Preview</a><a href="#progress">Progress</a><a href="#roadmap">Roadmap</a><a href="#pricing">Pricing</a><a href="gallery.html">Gallery</a><a href="#updates">Updates</a><a href="#follow" class="nav-cta">Follow</a>
   </nav>
 </header>
 
@@ -80,7 +83,7 @@ ${drafts ? '<div class="preview-bar" role="note">Local preview with draft conten
 
 <section class="band" id="ember" aria-labelledby="ember-h">
   <div class="ember-intro">
-    <img src="assets/img/ember.webp" alt="Ember, shown as a living flame" width="220" height="220" class="ember-pic">
+    <img src="assets/img/mascots/ember-classic.webp" alt="Ember, Hearth's flame mascot" width="220" height="220" class="ember-pic">
     <div>
       <p class="eyebrow">Meet Ember</p>
       <h2 id="ember-h">An administrator, not just a chatbot</h2>
@@ -88,6 +91,8 @@ ${drafts ? '<div class="preview-bar" role="note">Local preview with draft conten
       <p class="fine">You can rename Ember and give it a different voice and look. Ember thinks with the AI service you connect.</p>
     </div>
   </div>
+  <div class="mascots" role="group" aria-label="Ember's ten looks"><figure><img src="assets/img/mascots/ember-classic.webp" alt="Ember, Classic look" width="96" height="96" loading="lazy"><figcaption>Classic</figcaption></figure><figure><img src="assets/img/mascots/ember-chatty.webp" alt="Ember, Chatty look" width="96" height="96" loading="lazy"><figcaption>Chatty</figcaption></figure><figure><img src="assets/img/mascots/ember-manager.webp" alt="Ember, Manager look" width="96" height="96" loading="lazy"><figcaption>Manager</figcaption></figure><figure><img src="assets/img/mascots/ember-detective.webp" alt="Ember, Detective look" width="96" height="96" loading="lazy"><figcaption>Detective</figcaption></figure><figure><img src="assets/img/mascots/ember-engineer.webp" alt="Ember, Engineer look" width="96" height="96" loading="lazy"><figcaption>Engineer</figcaption></figure><figure><img src="assets/img/mascots/ember-gamer.webp" alt="Ember, Gamer look" width="96" height="96" loading="lazy"><figcaption>Gamer</figcaption></figure><figure><img src="assets/img/mascots/ember-it.webp" alt="Ember, IT look" width="96" height="96" loading="lazy"><figcaption>IT</figcaption></figure><figure><img src="assets/img/mascots/ember-cosmic.webp" alt="Ember, Cosmic look" width="96" height="96" loading="lazy"><figcaption>Cosmic</figcaption></figure><figure><img src="assets/img/mascots/ember-arcane.webp" alt="Ember, Arcane look" width="96" height="96" loading="lazy"><figcaption>Arcane</figcaption></figure><figure><img src="assets/img/mascots/ember-cozy.webp" alt="Ember, Cozy look" width="96" height="96" loading="lazy"><figcaption>Cozy</figcaption></figure></div>
+  <p class="fine center">Ten looks to pick from. Ember's name and voice are yours to change too.</p>
   <ol class="loop">
     ${site.emberLoop
       .map((s, i) => `<li><span class="n">${i + 1}</span><h3>${esc(s.step)}</h3>${chip(s.stage)}<p>${esc(s.note)}</p></li>`)
@@ -101,12 +106,9 @@ ${drafts ? '<div class="preview-bar" role="note">Local preview with draft conten
   <h2 id="preview-h">What it looks like today</h2>
   <p class="sub">Real screens from current development builds, using sample data instead of anyone's real homelab.</p>
   <div class="shots">
-    ${site.screens
-      .map(
-        (s) => `<figure class="shot"><a href="assets/shots/${esc(s.file)}"><img src="assets/shots/${esc(s.file)}" alt="${esc(s.title)}: ${esc(s.caption)}" width="1440" height="900" loading="lazy"></a><figcaption><strong>${esc(s.title)}</strong> ${esc(s.caption)}</figcaption></figure>`,
-      )
-      .join("\n    ")}
+    ${site.screens.filter((s) => s.featured).map(figure).join("\n    ")}
   </div>
+  <div class="ctas center"><a class="btn btn-primary" href="gallery.html">See all ${site.screens.length} screenshots</a></div>
 </section>
 
 <section class="band" id="build" aria-labelledby="build-h">
@@ -231,6 +233,25 @@ rmSync(dist, { recursive: true, force: true });
 mkdirSync(dist, { recursive: true });
 cpSync(path.join(root, "assets"), path.join(dist, "assets"), { recursive: true });
 writeFileSync(path.join(dist, "index.html"), html);
+// The gallery: every screenshot on its own page, so the main page stays short.
+const gallery = html
+  .replace(/<title>[^<]*<\/title>/, `<title>${esc(site.name)}: screenshots</title>`)
+  .replace(/href="#(?!main")/g, 'href="index.html#')
+  .replace(
+    /<main id="main">[\s\S]*<\/main>/,
+    `<main id="main">
+<section id="gallery" aria-labelledby="gallery-h">
+  <p class="eyebrow">Gallery</p>
+  <h1 id="gallery-h">Every screen, as it looks today</h1>
+  <p class="sub">Real screens from current development builds, using sample data instead of anyone's real homelab. Tap one to see it full size.</p>
+  <div class="shots gallery">
+    ${site.screens.map(figure).join("\n    ")}
+  </div>
+  <div class="ctas center"><a class="btn" href="index.html">Back to the overview</a></div>
+</section>
+</main>`,
+  );
+writeFileSync(path.join(dist, "gallery.html"), gallery);
 writeFileSync(path.join(dist, "feed.xml"), feed);
 // GitHub Pages: serve the files as they are, without Jekyll.
 writeFileSync(path.join(dist, ".nojekyll"), "");

@@ -171,3 +171,14 @@ footer strong { color: var(--muted); }
 .pricing li { margin-bottom: 10px; }
 .pricing strong { color: var(--ink); }
 .pricing .biz { margin: 14px 0 0; padding-top: 12px; border-top: 1px solid var(--line); color: var(--muted); }
+.shots.gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 1000px) { .shots.gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .shots.gallery { grid-template-columns: 1fr; } }
+.shot img { width: 100%; height: auto; }
+.shots .shot img[height="2202"] { max-height: 520px; width: auto; margin: 0 auto; display: block; }
+#gallery h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+.mascots { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 10px; margin: 28px 0 6px; }
+@media (max-width: 900px) { .mascots { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+.mascots figure { margin: 0; text-align: center; }
+.mascots img { width: 100%; max-width: 96px; height: auto; }
+.mascots figcaption { color: var(--muted); font-size: 0.8rem; margin-top: 2px; }
