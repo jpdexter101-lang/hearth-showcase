@@ -30,7 +30,7 @@
     {
       "step": "Approve",
       "stage": "implemented",
-      "note": "With the default settings, nothing changes until you approve that exact plan."
+      "note": "You choose what needs your OK: every change (the default), or with Full access, only steps with serious consequences."
     },
     {
       "step": "Execute",
@@ -258,9 +258,9 @@
     "note": "Prices aren't set yet. Once a feature ships free, it never moves behind a payment."
   },
   "emberIntro": [
-    "Ember is Hearth's AI. It doesn't stop at answering questions: it looks into what's really happening on your machines, explains it in plain words, and fixes things through plans you approve.",
-    "By default, Ember works only through Hearth's own tools. It has no shell, it uses your passwords and keys through Hearth's vault without seeing them, and every change to your homelab waits for your approval of that exact plan.",
-    "Full access is an option you turn on yourself. With it on, Ember runs as the full Claude Code on your machine and can run any command without asking first. It is told to stop and ask before deleting data, changing networking, or using sudo, but that is an instruction to the AI, not a lock Hearth enforces."
+    "Ember is Hearth's AI. It doesn't stop at answering questions: it looks into what's really happening on your machines, explains it in plain words, and fixes things.",
+    "Ember is the AI you connect: Claude Code, Codex, or a local model through Ollama, with everything that AI can do. Hearth doesn't hold it back. You only decide what it asks your permission for before it acts.",
+    "By default, it asks before every change: each one is a plan you approve. Turn on Full access and it works the way Claude Code does on its own, asking first only before steps with serious consequences, like deleting data, changing networking, or using sudo."
   ],
   "workflow": {
     "title": "One fix, start to finish",
