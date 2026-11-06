@@ -40,7 +40,7 @@
       "title": "Ember, the AI administrator",
       "stage": "implemented",
       "summary": "Ember is a full AI coding agent that knows your homelab: it investigates, explains, remembers, and fixes things with you.",
-      "detail": "Anything that changes a system is a plan you approve. An optional Full access mode skips routine questions but still asks before anything destructive. Your passwords and keys stay in Hearth's vault; Ember uses them without ever seeing them."
+      "detail": "By default, anything that changes a system is a plan you approve. Full access, off unless you turn it on, lets Ember run any command without asking first; it is instructed to ask before risky steps, but Hearth does not enforce that. Through Hearth's tools, Ember uses your passwords and keys without seeing them."
     },
     {
       "id": "monitoring",
@@ -74,7 +74,7 @@
       "id": "build",
       "title": "Approved installation and configuration",
       "stage": "in-development",
-      "summary": "Ember installs new apps and changes settings on your apps through plans you approve, with a backup, a check afterwards, and an automatic undo if it fails.",
+      "summary": "Ember installs new apps and changes settings on your apps through plans you approve, with a check afterwards and the change put back if that check fails.",
       "detail": "Ember can install a new app, change settings, and connect apps through their own APIs, one approved plan at a time. Building your whole starter plan in one guided run is still in development."
     },
     {
@@ -86,10 +86,10 @@
     },
     {
       "id": "verification",
-      "title": "Automatic verification and recovery",
+      "title": "Checks and recovery after every change",
       "stage": "implemented",
-      "summary": "Every approved change is checked afterwards and undone on its own if it doesn't work.",
-      "detail": "Every change, including a new install, is checked and put back if it fails. A final check across a whole build is still to come."
+      "summary": "Every approved step is checked by reading the result back, and a plan stops at its first failure.",
+      "detail": "Recovery depends on the step: changed settings go back to their earlier values, a failed install or update is put back, a check has nothing to undo, and deleting files or torrent data cannot be undone, which the approval screen says first. A final check across a whole build is still to come."
     },
     {
       "id": "release",

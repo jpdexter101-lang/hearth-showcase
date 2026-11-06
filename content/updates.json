@@ -27,7 +27,7 @@
       ],
       "image": "movie-night-banner.png",
       "imageAlt": "A Discord post from Hearth: a banner for Night of the Living Dead with the time and poster, then the guest list and where to watch.",
-      "state": "Released in a development build (0.40.6); waiting for a first real-world post."
+      "state": "Included in development build 0.40.6; waiting for a first real-world post."
     },
     {
       "id": "2026-10-30-home-command-center",
@@ -131,7 +131,7 @@
       "title": "Ember can install new apps, not just fix them",
       "body": [
         "Ember can now add a new app to your homelab as its own Docker Compose project, update an app to a newer version, or remove one while keeping its files and data. Each is a plan you approve first.",
-        "Hearth checks every change afterwards, on the containers and on the app itself, and puts things back on its own if the check fails. Building a whole homelab from your starter plan in one guided run is the next step."
+        "Hearth checks every change afterwards, on the containers and on the app itself, and if the check fails it puts the app back as it was. One limit: changes a new version made to the app's own data, like a database upgrade, stay. Building a whole homelab from your starter plan in one guided run is the next step."
       ],
       "state": "Built and tested; in review."
     },

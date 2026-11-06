@@ -30,17 +30,17 @@
     {
       "step": "Approve",
       "stage": "implemented",
-      "note": "Nothing changes until you approve that exact plan."
+      "note": "With the default settings, nothing changes until you approve that exact plan."
     },
     {
       "step": "Execute",
       "stage": "implemented",
-      "note": "Installs, restarts, repairs, and settings in any connected app, through plans you approve."
+      "note": "Installs, restarts, repairs, and settings in any connected app, as the plan you approved."
     },
     {
       "step": "Verify",
       "stage": "implemented",
-      "note": "Every change is checked afterwards, and undone on its own if it fails."
+      "note": "Each step is checked by reading the result back, and the plan stops at the first failure. Changed settings are put back; anything that can't be undone is marked before you approve."
     },
     {
       "step": "Remember",
@@ -50,140 +50,86 @@
   ],
   "screens": [
     {
+      "file": "panel-sonarr.png",
+      "title": "Sonarr, explained",
+      "caption": "Stuck and failed downloads named with the app's own reason, and one-click Import or Search, each a plan you approve.",
+      "w": 1440,
+      "h": 900,
+      "group": "admin",
+      "featured": true
+    },
+    {
+      "file": "job-review.png",
+      "title": "You approve the exact plan",
+      "caption": "A separate example: a two-step plan that checks Jellyfin, then restarts it. Each step says how it will be checked and what happens if a later step fails. Approval covers this plan, once.",
+      "w": 1440,
+      "h": 900,
+      "group": "admin",
+      "featured": true
+    },
+    {
       "file": "home.png",
       "title": "Home",
       "caption": "Ember, the AI, in the middle, your active projects around it, what needs you in one row, and your homelab's vital signs below. All on one screen.",
       "w": 1440,
       "h": 900,
-      "featured": true
-    },
-    {
-      "file": "home-wall.png",
-      "title": "A home dashboard for your wall",
-      "caption": "Hearth turns Home Assistant into a full-screen dashboard for a wall tablet or a spare screen: the time written out, the weather with a sky that matches outside, what's playing, today's calendar, shopping lists and scenes.",
-      "w": 1440,
-      "h": 900,
-      "featured": true
-    },
-    {
-      "file": "home-weather.png",
-      "title": "The forecast, one tap away",
-      "caption": "The next hours and the next days, from Home Assistant or a free weather service for your town.",
-      "w": 1440,
-      "h": 900
-    },
-    {
-      "file": "home-phone.png",
-      "title": "The same home on your phone",
-      "caption": "Pair a phone or tablet and it opens straight to the home dashboard, with Rooms, Media, Security and Household a tap away.",
-      "w": 1082,
-      "h": 2202
+      "group": "admin"
     },
     {
       "file": "panel-qbittorrent.png",
       "title": "The Lair: a panel for each app",
       "caption": "Open any app beside Ember. With branding on, each panel wears its app's own colors. qBittorrent shows stalled and broken torrents first, each with the repairs that fit it.",
       "w": 1440,
-      "h": 900
-    },
-    {
-      "file": "panel-sonarr.png",
-      "title": "Sonarr, explained",
-      "caption": "Stuck and failed downloads named with the app's own reason, and one-click Import or Search, each a plan you approve.",
-      "w": 1440,
       "h": 900,
-      "featured": true
+      "group": "admin"
     },
     {
       "file": "panel-plex.png",
       "title": "Who is watching what",
       "caption": "Plex libraries and live streams: direct play or transcode, buffering, and an Ask Ember button on every stream.",
       "w": 1440,
-      "h": 900
+      "h": 900,
+      "group": "admin"
     },
     {
       "file": "storage.png",
       "title": "Storage & Files",
       "caption": "Every drive with its health and temperature, plus files, recent downloads, file journeys, and RAID arrays.",
       "w": 1440,
-      "h": 900
+      "h": 900,
+      "group": "admin"
     },
     {
       "file": "war-room.png",
       "title": "The War Room",
       "caption": "Your projects with Claude Code, Codex, or a local Ollama model: a terminal, a task queue, files, and a kill switch.",
       "w": 1440,
-      "h": 900
+      "h": 900,
+      "group": "admin"
     },
     {
       "file": "notifications.png",
       "title": "Notifications",
       "caption": "Email, Discord, ntfy, or a webhook. Hearth writes only when something matters and says whether you need to act.",
       "w": 1440,
-      "h": 900
-    },
-    {
-      "file": "announce.png",
-      "title": "Tell friends what is new",
-      "caption": "When a movie or show lands in Plex or Jellyfin, Hearth posts it to your friends' Discord with its poster, details and trailer. Shown with Night of the Living Dead (1968, public domain).",
-      "w": 2880,
-      "h": 1800
-    },
-    {
-      "file": "movie-night-banner.png",
-      "title": "Watch parties, with a banner",
-      "caption": "The Banner style: Hearth draws the title, time and your note over the movie's own backdrop, with its poster beside them, then the RSVP card. Night of the Living Dead (1968, public domain).",
-      "w": 1440,
-      "h": 900
-    },
-    {
-      "file": "movie-night-streaming.png",
-      "title": "Pick the look",
-      "caption": "Banner, Cinematic, Streaming, or Compact. Streaming puts the movie's backdrop under the invitation. Friends answer I'm in or Can't make it.",
-      "w": 2880,
-      "h": 1800
-    },
-    {
-      "file": "movie-night-posted.png",
-      "title": "Planned, with a guest list",
-      "caption": "The watch party, who is coming, and spots left. Change the time, add a room code, or cancel it, and everyone invited hears about it.",
-      "w": 2880,
-      "h": 1800
-    },
-    {
-      "file": "hearth-bot-add.png",
-      "title": "Add Discord in one click",
-      "caption": "Add a destination, choose the Hearth bot, and pick who reads it. A friends and family channel only ever gets media announcements, never system alerts.",
-      "w": 1440,
-      "h": 900
-    },
-    {
-      "file": "hearth-bot-setup.png",
-      "title": "The Hearth bot, no token needed",
-      "caption": "Add Hearth to your Discord server, pick the channel, and you are done. Movie night invitations get I'm in and Can't make it buttons.",
-      "w": 1440,
-      "h": 900
-    },
-    {
-      "file": "discord-bot.png",
-      "title": "Or use your own Discord bot",
-      "caption": "Prefer your own? Set it up step by step in about two minutes. Its token goes into Hearth's vault and is never shown again.",
-      "w": 1440,
-      "h": 900
+      "h": 900,
+      "group": "admin"
     },
     {
       "file": "settings-ember.png",
       "title": "Make Ember your own",
       "caption": "Rename your AI, pick a built-in voice or your own speech machine, and choose how much it may do on its own.",
       "w": 1440,
-      "h": 900
+      "h": 900,
+      "group": "admin"
     },
     {
       "file": "plan.png",
       "title": "Plan your first homelab",
       "caption": "Pick what sounds fun in plain words. Hearth looks at your computer, only if you say yes, and explains every option.",
       "w": 1440,
-      "h": 900
+      "h": 900,
+      "group": "admin"
     },
     {
       "file": "plan-6-plan.png",
@@ -191,14 +137,89 @@
       "caption": "Every app explained: what it does, why it was picked, what it costs, and whether it runs comfortably on your machine.",
       "w": 1440,
       "h": 900,
+      "group": "admin"
+    },
+    {
+      "file": "home-wall.png",
+      "title": "A home dashboard for your wall",
+      "caption": "Hearth turns Home Assistant into a full-screen dashboard for a wall tablet or a spare screen: the time written out, the weather with a sky that matches outside, what's playing, today's calendar, shopping lists and scenes.",
+      "w": 1440,
+      "h": 900,
+      "group": "home",
       "featured": true
     },
     {
-      "file": "job-review.png",
-      "title": "You approve the exact plan",
-      "caption": "Each step says how it will be checked and what happens if a later step fails. Approval covers this plan, once.",
+      "file": "home-weather.png",
+      "title": "The forecast, one tap away",
+      "caption": "The next hours and the next days, from Home Assistant or a free weather service for your town.",
       "w": 1440,
-      "h": 900
+      "h": 900,
+      "group": "home"
+    },
+    {
+      "file": "home-phone.png",
+      "title": "The same home on your phone",
+      "caption": "Pair a phone or tablet and it opens straight to the home dashboard, with Rooms, Media, Security and Household a tap away.",
+      "w": 1082,
+      "h": 2202,
+      "group": "home"
+    },
+    {
+      "file": "announce.png",
+      "title": "Tell friends what is new",
+      "caption": "When a movie or show lands in Plex or Jellyfin, Hearth posts it to your friends' Discord with its poster, details and trailer. Shown with Night of the Living Dead (1968, public domain).",
+      "w": 2880,
+      "h": 1800,
+      "group": "friends"
+    },
+    {
+      "file": "movie-night-banner.png",
+      "title": "Watch parties, with a banner",
+      "caption": "The Banner style: Hearth draws the title, time and your note over the movie's own backdrop, with its poster beside them, then the RSVP card. Night of the Living Dead (1968, public domain).",
+      "w": 1440,
+      "h": 900,
+      "group": "friends",
+      "featured": true
+    },
+    {
+      "file": "movie-night-streaming.png",
+      "title": "Pick the look",
+      "caption": "Banner, Cinematic, Streaming, or Compact. Streaming puts the movie's backdrop under the invitation. Friends answer I'm in or Can't make it.",
+      "w": 2880,
+      "h": 1800,
+      "group": "friends"
+    },
+    {
+      "file": "movie-night-posted.png",
+      "title": "Planned, with a guest list",
+      "caption": "The watch party, who is coming, and spots left. Change the time, add a room code, or cancel it, and everyone invited hears about it.",
+      "w": 2880,
+      "h": 1800,
+      "group": "friends"
+    },
+    {
+      "file": "hearth-bot-add.png",
+      "title": "Add Discord in one click",
+      "caption": "Add a destination, choose the Hearth bot, and pick who reads it. A friends and family channel only ever gets media announcements, never system alerts.",
+      "w": 1440,
+      "h": 900,
+      "group": "friends"
+    },
+    {
+      "file": "hearth-bot-setup.png",
+      "title": "The Hearth bot, no token needed",
+      "caption": "Add Hearth to your Discord server, pick the channel, and you are done. Movie night invitations get I'm in and Can't make it buttons.",
+      "w": 1440,
+      "h": 900,
+      "group": "friends"
+    },
+    {
+      "file": "discord-bot.png",
+      "title": "Or use your own Discord bot",
+      "caption": "Prefer your own? Set it up step by step in about two minutes. Its token goes into Hearth's vault and is never shown again.",
+      "w": 1440,
+      "h": 900,
+      "group": "friends"
     }
   ],
   "concept": {
@@ -235,5 +256,55 @@
     ],
     "business": "Businesses, consultants, and anyone using Hearth to make money will need a business licence.",
     "note": "Prices aren't set yet. Once a feature ships free, it never moves behind a payment."
-  }
+  },
+  "emberIntro": [
+    "Ember is Hearth's AI. It doesn't stop at answering questions: it looks into what's really happening on your machines, explains it in plain words, and fixes things through plans you approve.",
+    "By default, Ember works only through Hearth's own tools. It has no shell, it uses your passwords and keys through Hearth's vault without seeing them, and every change to your homelab waits for your approval of that exact plan.",
+    "Full access is an option you turn on yourself. With it on, Ember runs as the full Claude Code on your machine and can run any command without asking first. It is told to stop and ask before deleting data, changing networking, or using sudo, but that is an instruction to the AI, not a lock Hearth enforces."
+  ],
+  "workflow": {
+    "title": "One fix, start to finish",
+    "intro": "A real run in a development build, using sample data: a download Sonarr left behind, the exact change Hearth proposes, and the check afterwards.",
+    "steps": [
+      {
+        "file": "flow-1-found.png",
+        "title": "1. The problem",
+        "caption": "The Sonarr panel lists finished downloads Sonarr hasn't imported. Sonarr matched one file to The Copper Line, season 2 episode 7; the other it couldn't place, so it waits for you.",
+        "w": 724,
+        "h": 694
+      },
+      {
+        "file": "flow-2-plan.png",
+        "title": "2. The exact plan",
+        "caption": "Nothing moves yet. The plan names the file, where it goes, and how: moved into the show, not copied.",
+        "w": 512,
+        "h": 274
+      },
+      {
+        "file": "flow-3-verified.png",
+        "title": "3. Checked afterwards",
+        "caption": "After you approve, Hearth reads Sonarr back to confirm the episode has its file. An import isn't undone automatically; a wrong one is removed in Sonarr.",
+        "w": 512,
+        "h": 300
+      }
+    ],
+    "note": "This fix started from the Sonarr panel. When Ember proposes a fix in chat, it comes as the same kind of plan for you to approve."
+  },
+  "galleryGroups": [
+    {
+      "id": "admin",
+      "title": "Homelab administration",
+      "intro": "Ember, the app panels, and the plans you approve."
+    },
+    {
+      "id": "home",
+      "title": "Home dashboard",
+      "intro": "Home Assistant as a dashboard for the wall, the phone, and the household."
+    },
+    {
+      "id": "friends",
+      "title": "Friends and family",
+      "intro": "New arrivals, watch parties, and Discord."
+    }
+  ]
 }

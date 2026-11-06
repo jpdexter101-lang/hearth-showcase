@@ -21,7 +21,10 @@ const FORBIDDEN = [
   [/-----BEGIN [A-Z ]*PRIVATE KEY-----/, "a private key"],
   [/\b[a-f0-9]{32,64}\b/i, "a long hex string (key, hash, or id)"],
   [/sourceMappingURL|\.map["')]/, "a source map reference"],
-  [/<script\b/i, "a script tag (the site is meant to have none)"],
+  // One script only: the site's own assets/site.js (phone menu and screenshot viewer), loaded
+  // from this site, with no inline code and nothing from anywhere else.
+  [/<script\b(?![^>]*\bsrc="(?:\$\{v\("assets\/site\.js"\)\}|assets\/site\.js\?v=[0-9a-f]{8})" defer><\/script>)/i, "a script tag other than the site's own assets/site.js"],
+  [/\b(?:fetch|XMLHttpRequest|sendBeacon|WebSocket|eval|localStorage|sessionStorage|document\.cookie)\b/, "network, storage, or eval code"],
 ];
 // Links may only point at the page itself, GitHub, and well-known documentation.
 const ALLOWED_ORIGINS = ["https://github.com", "https://jpdexter101-lang.github.io"];
@@ -46,7 +49,7 @@ const walk = (p) => {
 };
 scan.forEach(walk);
 
-const text = /\.(html|css|xml|json|md|txt|svg)$/i;
+const text = /\.(html|css|xml|json|md|txt|svg|js)$/i;
 for (const f of files) {
   const buf = readFileSync(path.join(root, f));
   if (f.endsWith(".map")) failures.push(`${f}: source map file`);

@@ -1,5 +1,6 @@
 // Builds the showcase into docs/: one static page and an Atom feed, from the files in content/.
-// No dependencies and no JavaScript in the output. Only updates marked "published" are included,
+// No dependencies. One small first-party script (assets/site.js) only adds conveniences: the
+// phone menu closes after a choice, and screenshots open in a viewer. Without it, every link works. Only updates marked "published" are included,
 // unless --drafts is passed (local preview only: drafts are labelled and the page says so).
 import { cpSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { createHash } from "node:crypto";
@@ -41,7 +42,7 @@ const counts = stages
   .join("");
 
 const figure = (s) =>
-  `<figure class="shot"><a href="${v(`assets/shots/${s.file}`)}"><img src="${v(`assets/shots/${s.file}`)}" alt="${esc(s.title)}: ${esc(s.caption)}" width="${s.w ?? 1440}" height="${s.h ?? 900}" loading="lazy"></a><figcaption><strong>${esc(s.title)}</strong> ${esc(s.caption)}</figcaption></figure>`;
+  `<figure class="shot"><a href="${v(`assets/shots/${s.file}`)}" data-view><img src="${v(`assets/shots/${s.file}`)}" alt="${esc(s.title)}: ${esc(s.caption)}" width="${s.w ?? 1440}" height="${s.h ?? 900}" loading="lazy"></a><figcaption><strong>${esc(s.title)}</strong> ${esc(s.caption)}</figcaption></figure>`;
 
 const html = `<!doctype html>
 <html lang="en">
@@ -64,9 +65,16 @@ ${drafts ? '<meta name="robots" content="noindex">' : ""}
 ${drafts ? '<div class="preview-bar" role="note">Local preview with draft content. Nothing here is published, and links to the public repository will not work until it exists.</div>' : ""}
 <header class="top">
   <a class="brand" href="#top"><img src="assets/img/hearth-mark.png" alt="" width="36" height="36"><span>hearth</span></a>
-  <nav aria-label="Sections">
-    <a href="#ember">Ember</a><a href="#preview">Preview</a><a href="#progress">Progress</a><a href="#roadmap">Roadmap</a><a href="#pricing">Pricing</a><a href="gallery.html">Gallery</a><a href="#updates">Updates</a><a href="#follow" class="nav-cta">Follow</a>
+  <nav class="nav-wide" aria-label="Sections">
+    <a href="#ember">Ember</a><a href="#workflow">In action</a><a href="#preview">Preview</a><a href="#progress">Progress</a><a href="#roadmap">Roadmap</a><a href="#pricing">Pricing</a><a href="gallery.html">Gallery</a><a href="#updates">Updates</a><a href="#follow" class="nav-cta">Follow</a>
   </nav>
+  <div class="nav-small">
+    <details class="menu">
+      <summary>Sections</summary>
+      <nav aria-label="Sections"><a href="#ember">Ember</a><a href="#workflow">In action</a><a href="#preview">Preview</a><a href="#progress">Progress</a><a href="#roadmap">Roadmap</a><a href="#pricing">Pricing</a><a href="gallery.html">Gallery</a><a href="#updates">Updates</a></nav>
+    </details>
+    <a href="#follow" class="nav-cta">Follow</a>
+  </div>
 </header>
 
 <main id="main">
@@ -77,7 +85,7 @@ ${drafts ? '<div class="preview-bar" role="note">Local preview with draft conten
     <p class="lead">${esc(site.description)}</p>
     <div class="ctas">
       <a class="btn btn-primary" href="#follow">Follow development</a>
-      <a class="btn" href="#progress">See where it's at</a>
+      <a class="btn" href="#workflow">See Ember in action</a>
     </div>
   </div>
   <figure class="hero-shot">
@@ -86,30 +94,45 @@ ${drafts ? '<div class="preview-bar" role="note">Local preview with draft conten
   </figure>
 </section>
 
+<section id="workflow" aria-labelledby="workflow-h">
+  <p class="eyebrow">See it in action</p>
+  <h2 id="workflow-h">${esc(site.workflow.title)}</h2>
+  <p class="sub">${esc(site.workflow.intro)}</p>
+  <ol class="flow">
+    ${site.workflow.steps
+      .map(
+        (st) => `<li><figure class="shot"><a href="${v(`assets/shots/${st.file}`)}" data-view><img src="${v(`assets/shots/${st.file}`)}" alt="${esc(st.title)}: ${esc(st.caption)}" width="${st.w}" height="${st.h}" loading="lazy"></a><figcaption><strong>${esc(st.title)}</strong> ${esc(st.caption)}</figcaption></figure></li>`,
+      )
+      .join("\n    ")}
+  </ol>
+  <p class="fine">${esc(site.workflow.note)}</p>
+</section>
+
 <section class="band" id="ember" aria-labelledby="ember-h">
   <div class="ember-intro">
     <img src="${v("assets/img/mascots/ember-classic.webp")}" alt="Ember, Hearth's flame mascot" width="220" height="220" class="ember-pic">
     <div>
       <p class="eyebrow">Meet Ember</p>
       <h2 id="ember-h">An administrator, not just a chatbot</h2>
-      <p>Ember is Hearth's AI. It doesn't stop at answering questions: it looks into what's really happening on your machines, explains it in plain words, and fixes things through plans you approve. It never gets a shell, your files, or your passwords, and anything that changes your homelab waits for your yes.</p>
+      ${site.emberIntro.map((t) => `<p>${esc(t)}</p>`).join("\n      ")}
       <p class="fine">You can rename Ember and give it a different voice and look. Ember thinks with the AI service you connect.</p>
     </div>
   </div>
-  <div class="mascots" role="group" aria-label="Ember's ten looks"><figure><img src="${v("assets/img/mascots/ember-classic.webp")}" alt="Ember, Classic look" width="96" height="96" loading="lazy"><figcaption>Classic</figcaption></figure><figure><img src="assets/img/mascots/ember-chatty.webp" alt="Ember, Chatty look" width="96" height="96" loading="lazy"><figcaption>Chatty</figcaption></figure><figure><img src="assets/img/mascots/ember-manager.webp" alt="Ember, Manager look" width="96" height="96" loading="lazy"><figcaption>Manager</figcaption></figure><figure><img src="assets/img/mascots/ember-detective.webp" alt="Ember, Detective look" width="96" height="96" loading="lazy"><figcaption>Detective</figcaption></figure><figure><img src="assets/img/mascots/ember-engineer.webp" alt="Ember, Engineer look" width="96" height="96" loading="lazy"><figcaption>Engineer</figcaption></figure><figure><img src="assets/img/mascots/ember-gamer.webp" alt="Ember, Gamer look" width="96" height="96" loading="lazy"><figcaption>Gamer</figcaption></figure><figure><img src="assets/img/mascots/ember-it.webp" alt="Ember, IT look" width="96" height="96" loading="lazy"><figcaption>IT</figcaption></figure><figure><img src="assets/img/mascots/ember-cosmic.webp" alt="Ember, Cosmic look" width="96" height="96" loading="lazy"><figcaption>Cosmic</figcaption></figure><figure><img src="assets/img/mascots/ember-arcane.webp" alt="Ember, Arcane look" width="96" height="96" loading="lazy"><figcaption>Arcane</figcaption></figure><figure><img src="assets/img/mascots/ember-cozy.webp" alt="Ember, Cozy look" width="96" height="96" loading="lazy"><figcaption>Cozy</figcaption></figure></div>
-  <p class="fine center">Ten looks to pick from. Ember's name and voice are yours to change too.</p>
   <ol class="loop">
     ${site.emberLoop
       .map((s, i) => `<li><span class="n">${i + 1}</span><h3>${esc(s.step)}</h3>${chip(s.stage)}<p>${esc(s.note)}</p></li>`)
       .join("\n    ")}
   </ol>
   <p class="fine center">"Implemented" means built and tested in development builds. Nothing is publicly released yet.</p>
+  <h3 class="looks-h">Make Ember yours</h3>
+  <p class="fine center">Ten looks to pick from. Ember's name and voice are yours to change too.</p>
+  <div class="mascots" role="group" aria-label="Ember's ten looks"><figure><img src="${v("assets/img/mascots/ember-classic.webp")}" alt="Ember, Classic look" width="96" height="96" loading="lazy"><figcaption>Classic</figcaption></figure><figure><img src="assets/img/mascots/ember-chatty.webp" alt="Ember, Chatty look" width="96" height="96" loading="lazy"><figcaption>Chatty</figcaption></figure><figure><img src="assets/img/mascots/ember-manager.webp" alt="Ember, Manager look" width="96" height="96" loading="lazy"><figcaption>Manager</figcaption></figure><figure><img src="assets/img/mascots/ember-detective.webp" alt="Ember, Detective look" width="96" height="96" loading="lazy"><figcaption>Detective</figcaption></figure><figure><img src="assets/img/mascots/ember-engineer.webp" alt="Ember, Engineer look" width="96" height="96" loading="lazy"><figcaption>Engineer</figcaption></figure><figure><img src="assets/img/mascots/ember-gamer.webp" alt="Ember, Gamer look" width="96" height="96" loading="lazy"><figcaption>Gamer</figcaption></figure><figure><img src="assets/img/mascots/ember-it.webp" alt="Ember, IT look" width="96" height="96" loading="lazy"><figcaption>IT</figcaption></figure><figure><img src="assets/img/mascots/ember-cosmic.webp" alt="Ember, Cosmic look" width="96" height="96" loading="lazy"><figcaption>Cosmic</figcaption></figure><figure><img src="assets/img/mascots/ember-arcane.webp" alt="Ember, Arcane look" width="96" height="96" loading="lazy"><figcaption>Arcane</figcaption></figure><figure><img src="assets/img/mascots/ember-cozy.webp" alt="Ember, Cozy look" width="96" height="96" loading="lazy"><figcaption>Cozy</figcaption></figure></div>
 </section>
 
 <section id="preview" aria-labelledby="preview-h">
   <p class="eyebrow">Product preview</p>
   <h2 id="preview-h">What it looks like today</h2>
-  <p class="sub">Real screens from current development builds, using sample data instead of anyone's real homelab.</p>
+  <p class="sub">Real screens from current development builds, using sample data instead of anyone's real homelab: an app panel, a plan waiting for approval, the home dashboard, and a watch party.</p>
   <div class="shots">
     ${site.screens.filter((s) => s.featured).map(figure).join("\n    ")}
   </div>
@@ -130,6 +153,7 @@ ${drafts ? '<div class="preview-bar" role="note">Local preview with draft conten
       <p class="fine">An illustration of the experience we're designing, not a screenshot. Every real step will come from what actually happened, and anything sensitive will ask you first.</p>
     </figure>
   </div>
+  <div class="build-shot">${figure(site.screens.find((x) => x.file === "plan-6-plan.png"))}</div>
 </section>
 
 <section id="progress" aria-labelledby="progress-h">
@@ -186,18 +210,25 @@ ${drafts ? '<div class="preview-bar" role="note">Local preview with draft conten
           .join("")}</ol>`
       : '<p class="sub">The first update is on its way.</p>'
   }
-  <p><a href="feed.xml">Subscribe with any feed reader</a> to get new updates.</p>
+  <p class="fine">Get new updates in a feed reader (Feedly, Inoreader, NetNewsWire and others): add <code>${esc(site.siteUrl)}feed.xml</code>. Opening that address in a browser shows raw XML; that's normal.</p>
 </section>
 
 <section class="band follow" id="follow" aria-labelledby="follow-h">
   <h2 id="follow-h">Follow along</h2>
-  <p class="sub">Hearth isn't available to download yet. Star or watch the project on GitHub, or subscribe to the update feed, to hear when it is. No sign-up, and we don't collect anything about you.</p>
-  <div class="ctas center">
-    <a class="btn btn-primary" href="${esc(site.repoUrl)}">Star on GitHub</a>
-    <a class="btn" href="${esc(site.repoUrl)}">Watch for releases</a>
-    <a class="btn" href="feed.xml">Update feed</a>
+  <p class="sub">Hearth isn't available to download yet. Two ways to hear when it is. No sign-up here, and we don't collect anything about you.</p>
+  <div class="follow-ways">
+    <div>
+      <h3>On GitHub</h3>
+      <p>Open the project page, then press <strong>Star</strong> to bookmark it, or <strong>Watch</strong>, then <strong>Custom</strong>, then <strong>Releases</strong> to get a notification when a release comes out. Both need a free GitHub account.</p>
+      <a class="btn btn-primary" href="${esc(site.repoUrl)}">Open the project on GitHub</a>
+    </div>
+    <div>
+      <h3>In a feed reader</h3>
+      <p>Add this address to any feed reader to get every development update:</p>
+      <p><code>${esc(site.siteUrl)}feed.xml</code></p>
+      <p class="fine">Opening it in a browser shows raw XML; a feed reader turns it into posts.</p>
+    </div>
   </div>
-  <p class="fine center">On GitHub, choose Watch, then Custom, then Releases, to hear only about releases.</p>
 </section>
 </main>
 
@@ -206,6 +237,16 @@ ${drafts ? '<div class="preview-bar" role="note">Local preview with draft conten
   <p>Made by ${esc(site.maker)}. ${esc(site.copyright)} The text, images, and design of this site are original showcase content.</p>
   <p>App names and logos shown in the interface belong to their owners and are used only to identify them.</p>
 </footer>
+<dialog class="viewer" aria-label="Screenshot viewer">
+  <figure><img alt=""><p class="viewer-hint">Swipe sideways to see the whole screen.</p><figcaption></figcaption></figure>
+  <div class="viewer-bar">
+    <button type="button" data-prev>Previous</button>
+    <span class="viewer-count" aria-live="polite"></span>
+    <button type="button" data-next>Next</button>
+    <button type="button" data-close>Close</button>
+  </div>
+</dialog>
+<script src="${v("assets/site.js")}" defer></script>
 </body>
 </html>
 `;
@@ -249,9 +290,18 @@ const gallery = html
   <p class="eyebrow">Gallery</p>
   <h1 id="gallery-h">Every screen, as it looks today</h1>
   <p class="sub">Real screens from current development builds, using sample data instead of anyone's real homelab. Tap one to see it full size.</p>
+  <nav class="gallery-jump" aria-label="Gallery groups">${site.galleryGroups.map((g) => `<a href="#g-${g.id}">${esc(g.title)}</a>`).join("")}</nav>
+  ${site.galleryGroups
+    .map(
+      (g) => `<section class="gallery-group" id="g-${g.id}" aria-labelledby="g-${g.id}-h">
+  <h2 id="g-${g.id}-h">${esc(g.title)}</h2>
+  <p class="sub">${esc(g.intro)}</p>
   <div class="shots gallery">
-    ${site.screens.map(figure).join("\n    ")}
+    ${site.screens.filter((x) => x.group === g.id).map(figure).join("\n    ")}
   </div>
+</section>`,
+    )
+    .join("\n  ")}
   <div class="ctas center"><a class="btn" href="index.html">Back to the overview</a></div>
 </section>
 </main>`,

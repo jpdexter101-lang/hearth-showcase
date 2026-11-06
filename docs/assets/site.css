@@ -27,7 +27,7 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 /* Section links land below the sticky header. */
-main > section { scroll-margin-top: 72px; }
+main section[id] { scroll-margin-top: 84px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body {
   margin: 0;
@@ -66,7 +66,20 @@ p { margin: 0 0 1em; }
 .top nav a { color: var(--muted); text-decoration: none; padding: 8px 10px; border-radius: 8px; font-size: 0.92rem; white-space: nowrap; min-height: 40px; display: inline-flex; align-items: center; }
 .top nav a:hover { color: var(--ink); background: var(--raised); }
 .top nav .nav-cta { color: var(--ember-bright); }
-@media (max-width: 720px) { .top nav a:not(.nav-cta) { display: none; } }
+/* Wide screens: the links in a row. Phones: a Sections menu beside Follow. */
+.nav-small { display: none; align-items: center; gap: 6px; }
+@media (max-width: 860px) { .top .nav-wide { display: none; } .nav-small { display: flex; } }
+.menu { position: relative; }
+.menu summary { list-style: none; cursor: pointer; color: var(--ink); border: 1px solid var(--line-strong); border-radius: 10px; padding: 0 14px; min-height: 44px; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; font-weight: 600; }
+.menu summary::-webkit-details-marker { display: none; }
+.menu summary::after { content: ""; width: 8px; height: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform 160ms; }
+.menu[open] summary::after { transform: translateY(2px) rotate(-135deg); }
+.menu summary:focus-visible { outline: 2px solid var(--ember-bright); outline-offset: 3px; }
+.menu[open] summary { border-color: var(--ember); }
+.top .menu nav { position: absolute; right: 0; top: calc(100% + 8px); display: grid; min-width: 210px; padding: 6px; background: var(--panel); border: 1px solid var(--line-strong); border-radius: 12px; box-shadow: 0 20px 50px rgb(0 0 0 / 0.55); overflow: visible; }
+.top .menu nav a { color: var(--ink); min-height: 44px; font-size: 1rem; }
+.top .menu nav a:hover, .top .menu nav a:focus-visible { background: var(--raised); }
+.nav-small .nav-cta { color: var(--ember-bright); text-decoration: none; font-weight: 600; padding: 0 12px; min-height: 44px; display: inline-flex; align-items: center; border-radius: 10px; }
 
 main > section { padding: clamp(56px, 9vw, 104px) clamp(16px, 5vw, 64px); max-width: 1240px; margin: 0 auto; }
 main > section.band { max-width: none; background: linear-gradient(180deg, transparent, rgb(255 138 0 / 0.03) 30%, transparent); border-block: 1px solid var(--line); }
@@ -182,3 +195,53 @@ footer strong { color: var(--muted); }
 .mascots figure { margin: 0; text-align: center; }
 .mascots img { width: 100%; max-width: 96px; height: auto; }
 .mascots figcaption { color: var(--muted); font-size: 0.8rem; margin-top: 2px; }
+
+/* One fix, start to finish. */
+.flow { list-style: none; padding: 0; margin: 32px 0 12px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2.5vw, 28px); align-items: start; }
+@media (max-width: 900px) { .flow { grid-template-columns: 1fr; max-width: 560px; } }
+.flow .shot img { border-radius: 12px; }
+
+/* Ember's looks: a compact strip after the workflow cards. */
+.looks-h { text-align: center; margin-top: 40px; }
+.mascots { grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 6px; margin: 12px auto 0; max-width: 760px; }
+.mascots img { max-width: 64px; margin: 0 auto; }
+.mascots figcaption { font-size: 0.74rem; }
+@media (max-width: 700px) { .mascots { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+
+/* The planner, under the build journey. */
+.build-shot { max-width: 760px; margin-top: 32px; }
+
+/* Follow along. */
+.follow-ways { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 24px; text-align: left; }
+@media (max-width: 760px) { .follow-ways { grid-template-columns: 1fr; } }
+.follow-ways > div { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
+.follow-ways p { color: var(--muted); }
+code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 0.88em; background: var(--raised); border: 1px solid var(--line-strong); border-radius: 6px; padding: 2px 6px; overflow-wrap: anywhere; color: var(--ink); }
+
+/* Gallery groups. */
+.gallery-jump { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 8px; }
+.gallery-jump a { border: 1px solid var(--line-strong); border-radius: 999px; padding: 0 14px; min-height: 40px; display: inline-flex; align-items: center; color: var(--ink); text-decoration: none; font-size: 0.92rem; }
+.gallery-jump a:hover { border-color: var(--ember); }
+.gallery-group { margin-top: 48px; }
+.gallery-group h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); }
+
+/* Screenshot viewer (assets/site.js). */
+.viewer { width: min(1400px, 96vw); max-height: 96vh; padding: 0; border: 1px solid var(--line-strong); border-radius: 14px; background: var(--panel); color: var(--ink); }
+.viewer::backdrop { background: rgb(0 0 0 / 0.82); }
+.viewer figure { margin: 0; padding: 12px 12px 0; }
+.viewer img { width: 100%; max-height: 74vh; object-fit: contain; border-radius: 10px; background: var(--bg); }
+.viewer figcaption { color: var(--muted); padding: 10px 4px 0; font-size: 0.95rem; }
+.viewer figcaption strong { color: var(--ink); display: block; }
+.viewer-bar { display: flex; gap: 8px; align-items: center; padding: 12px; flex-wrap: wrap; }
+.viewer-bar button { font: inherit; font-weight: 600; color: var(--ink); background: var(--raised); border: 1px solid var(--line-strong); border-radius: 10px; min-height: 44px; padding: 0 16px; cursor: pointer; }
+.viewer-bar button:hover { border-color: var(--ember); }
+.viewer-bar button:focus-visible { outline: 2px solid var(--ember-bright); outline-offset: 2px; }
+.viewer-bar [data-close] { margin-left: auto; }
+.viewer-count { color: var(--muted); font-size: 0.9rem; }
+/* Phones: a desktop screenshot is shown larger, swipe sideways to see all of it. */
+@media (max-width: 700px) {
+  .viewer figure { overflow-x: auto; }
+  .viewer img { width: auto; max-width: none; height: 52vh; max-height: none; }
+  .viewer .viewer-hint { display: block; }
+}
+.viewer-hint { display: none; color: var(--faint); font-size: 0.82rem; padding: 6px 4px 0; }

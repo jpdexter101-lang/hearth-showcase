@@ -80,7 +80,7 @@
     <id>https://jpdexter101-lang.github.io/hearth-showcase/#2026-10-19-ember-installs-apps</id>
     <link href="https://jpdexter101-lang.github.io/hearth-showcase/#updates"/>
     <updated>2026-10-19T00:00:00Z</updated>
-    <summary>Ember can now add a new app to your homelab as its own Docker Compose project, update an app to a newer version, or remove one while keeping its files and data. Each is a plan you approve first. Hearth checks every change afterwards, on the containers and on the app itself, and puts things back on its own if the check fails. Building a whole homelab from your starter plan in one guided run is the next step.</summary>
+    <summary>Ember can now add a new app to your homelab as its own Docker Compose project, update an app to a newer version, or remove one while keeping its files and data. Each is a plan you approve first. Hearth checks every change afterwards, on the containers and on the app itself, and if the check fails it puts the app back as it was. One limit: changes a new version made to the app&#39;s own data, like a database upgrade, stay. Building a whole homelab from your starter plan in one guided run is the next step.</summary>
   </entry>
   <entry>
     <title>Connect your AI, right after you create your account</title>
