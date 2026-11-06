@@ -57,7 +57,7 @@ ${drafts ? '<div class="preview-bar" role="note">Local preview with draft conten
 <header class="top">
   <a class="brand" href="#top"><img src="assets/img/hearth-mark.png" alt="" width="36" height="36"><span>hearth</span></a>
   <nav aria-label="Sections">
-    <a href="#ember">Ember</a><a href="#preview">Preview</a><a href="#progress">Progress</a><a href="#roadmap">Roadmap</a><a href="#updates">Updates</a><a href="#follow" class="nav-cta">Follow</a>
+    <a href="#ember">Ember</a><a href="#preview">Preview</a><a href="#progress">Progress</a><a href="#roadmap">Roadmap</a><a href="#pricing">Pricing</a><a href="#updates">Updates</a><a href="#follow" class="nav-cta">Follow</a>
   </nav>
 </header>
 
@@ -154,6 +154,17 @@ ${drafts ? '<div class="preview-bar" role="note">Local preview with draft conten
       .join("\n    ")}
   </div>
   <p class="fine">Plans change as we learn. Dates aren't promised until a release is ready.</p>
+</section>
+
+<section id="pricing" aria-labelledby="pricing-h">
+  <p class="eyebrow">Free and paid</p>
+  <h2 id="pricing-h">${esc(site.pricing.title)}</h2>
+  <p class="lead">${esc(site.pricing.lead)}</p>
+  <div class="pricing">
+    <div><h3>Free</h3><ul>${site.pricing.free.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>
+    <div><h3>Paid add-ons</h3><ul>${site.pricing.paid.map(([n, d]) => `<li><strong>${esc(n)}</strong>: ${esc(d)}</li>`).join("")}</ul><p class="biz">${esc(site.pricing.business)}</p></div>
+  </div>
+  <p class="fine">${esc(site.pricing.note)}</p>
 </section>
 
 <section id="updates" aria-labelledby="updates-h">

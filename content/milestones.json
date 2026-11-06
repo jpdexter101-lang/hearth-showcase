@@ -47,7 +47,7 @@
       "title": "Service discovery and monitoring",
       "stage": "implemented",
       "summary": "Finds the containers and apps on a machine, watches their health, and shows a live panel for each app, from the *arr apps and Plex to qBittorrent, Home Assistant, and more.",
-      "detail": "Every PC that runs Hearth watches its own services, and you see them all from one account."
+      "detail": "Every PC that runs Hearth watches its own services. Seeing all your PCs from one account is Hearth Connected, a paid add-on."
     },
     {
       "id": "onboarding",

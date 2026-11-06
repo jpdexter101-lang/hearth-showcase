@@ -1,6 +1,21 @@
 {
   "updates": [
     {
+      "id": "2026-11-06-home-dashboard",
+      "date": "2026-11-06",
+      "status": "published",
+      "category": "Home",
+      "title": "A home dashboard for the wall, the phone and the TV",
+      "body": [
+        "Hearth now turns Home Assistant into a full-screen home dashboard. The time is written out in words, the window shows the real weather outside, and the cards cover what's playing, today's calendar, shopping lists, rooms, doors and scenes.",
+        "Music shows the song's poster, can play its official music video in the card, and can send it to a TV. Scenes are made and edited right on the dashboard, and opening a door asks for a PIN.",
+        "A paired wall tablet sees only the home dashboard, nothing else of Hearth."
+      ],
+      "image": "home-wall.png",
+      "imageAlt": "Hearth's home dashboard with the time, weather, music, calendar, lists and scenes, shown with sample data",
+      "state": "Built and tested; in review."
+    },
+    {
       "id": "2026-10-30-watch-party-banner",
       "date": "2026-10-30",
       "status": "published",
@@ -80,7 +95,7 @@
       "title": "Bring your own AI: Claude Code, Codex, or a local model",
       "body": [
         "Ember can now run on Claude Code, Codex, or a model on your own hardware through Ollama. Whichever you pick gets the same tools, the same memory of your homelab, and the same approval rules.",
-        "The War Room is where you work with it on bigger jobs, with your projects from every PC in one place."
+        "The War Room is where you work with it on bigger jobs. With Hearth Connected, a paid add-on, it shows your projects from every PC in one place."
       ],
       "state": "Built and tested; in review."
     },
@@ -103,6 +118,7 @@
       "title": "One account across all your PCs, on Linux and Windows",
       "body": [
         "Hearth runs on each PC you own, Linux or Windows, and they join together under one account with a pairing code. Each PC watches its own services, and you see and manage all of them from any of them, or from your phone.",
+        "Update, November 6: linking your PCs this way is Hearth Connected, a paid add-on. Hearth on each PC on its own stays free.",
         "Updates are offered, never forced: Hearth tells you a new version is out and you update when you are ready."
       ],
       "state": "Built and tested; in review."

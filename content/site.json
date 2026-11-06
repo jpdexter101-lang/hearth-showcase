@@ -60,6 +60,21 @@
       "caption": "Ember's chat stays open as you move between pages, so you can keep talking while you check a service or a setting."
     },
     {
+      "file": "home-wall.png",
+      "title": "A home dashboard for your wall",
+      "caption": "Hearth turns Home Assistant into a full-screen dashboard for a wall tablet or a spare screen: the time written out, the weather with a sky that matches outside, what's playing, today's calendar, shopping lists and scenes."
+    },
+    {
+      "file": "home-weather.png",
+      "title": "The forecast, one tap away",
+      "caption": "The next hours and the next days, from Home Assistant or a free weather service for your town."
+    },
+    {
+      "file": "home-phone.png",
+      "title": "The same home on your phone",
+      "caption": "Pair a phone or tablet and it opens straight to the home dashboard, with Rooms, Media, Security and Household a tap away."
+    },
+    {
       "file": "panel-qbittorrent.png",
       "title": "The Lair: a panel for each app",
       "caption": "Open any app beside Ember. qBittorrent shows stalled and broken torrents first, each with the repairs that fit it."
@@ -162,5 +177,27 @@
       "Testing the connection to Prowlarr: waiting"
     ]
   },
-  "copyright": "© 2026 Dragon's Oath. All rights reserved."
+  "copyright": "© 2026 Dragon's Oath. All rights reserved.",
+  "pricing": {
+    "title": "Free for your home, with a few paid add-ons",
+    "lead": "Hearth is free for personal and home use. Two optional add-ons will cost extra, and businesses need a licence. We're saying so now, before anyone downloads it.",
+    "free": [
+      "Everything a single Hearth does: Ember, a panel for each app, monitoring, the vault, plans you approve, backups and undo.",
+      "As many phones, tablets and wall screens as you like, paired to your Hearth.",
+      "As many separate Hearths as you like, one on each PC.",
+      "Your own AI: Claude Code, Codex, or a local model through Ollama, at no cost from us."
+    ],
+    "paid": [
+      [
+        "Hearth Connected",
+        "Link your Hearths on different PCs so they work as one, with every PC's projects and systems in one place. Paid from the first link."
+      ],
+      [
+        "Show & Tell",
+        "While Hearth's AI works, it opens and points at what it is examining, and Teach me explains why it matters. The AI does the same work without it."
+      ]
+    ],
+    "business": "Businesses, consultants, and anyone using Hearth to make money will need a business licence.",
+    "note": "Prices aren't set yet. Once a feature ships free, it never moves behind a payment."
+  }
 }

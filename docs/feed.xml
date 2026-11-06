@@ -4,7 +4,14 @@
   <link href="https://jpdexter101-lang.github.io/hearth-showcase/"/>
   <link rel="self" href="https://jpdexter101-lang.github.io/hearth-showcase/feed.xml"/>
   <id>https://jpdexter101-lang.github.io/hearth-showcase/</id>
-  <updated>2026-10-30T00:00:00Z</updated>
+  <updated>2026-11-06T00:00:00Z</updated>
+  <entry>
+    <title>A home dashboard for the wall, the phone and the TV</title>
+    <id>https://jpdexter101-lang.github.io/hearth-showcase/#2026-11-06-home-dashboard</id>
+    <link href="https://jpdexter101-lang.github.io/hearth-showcase/#updates"/>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>Hearth now turns Home Assistant into a full-screen home dashboard. The time is written out in words, the window shows the real weather outside, and the cards cover what&#39;s playing, today&#39;s calendar, shopping lists, rooms, doors and scenes. Music shows the song&#39;s poster, can play its official music video in the card, and can send it to a TV. Scenes are made and edited right on the dashboard, and opening a door asks for a PIN. A paired wall tablet sees only the home dashboard, nothing else of Hearth.</summary>
+  </entry>
   <entry>
     <title>Watch party invitations get a banner</title>
     <id>https://jpdexter101-lang.github.io/hearth-showcase/#2026-10-30-watch-party-banner</id>
@@ -52,7 +59,7 @@
     <id>https://jpdexter101-lang.github.io/hearth-showcase/#2026-10-27-choose-your-ai</id>
     <link href="https://jpdexter101-lang.github.io/hearth-showcase/#updates"/>
     <updated>2026-10-27T00:00:00Z</updated>
-    <summary>Ember can now run on Claude Code, Codex, or a model on your own hardware through Ollama. Whichever you pick gets the same tools, the same memory of your homelab, and the same approval rules. The War Room is where you work with it on bigger jobs, with your projects from every PC in one place.</summary>
+    <summary>Ember can now run on Claude Code, Codex, or a model on your own hardware through Ollama. Whichever you pick gets the same tools, the same memory of your homelab, and the same approval rules. The War Room is where you work with it on bigger jobs. With Hearth Connected, a paid add-on, it shows your projects from every PC in one place.</summary>
   </entry>
   <entry>
     <title>Talk to Ember out loud</title>
@@ -66,7 +73,7 @@
     <id>https://jpdexter101-lang.github.io/hearth-showcase/#2026-10-23-every-pc</id>
     <link href="https://jpdexter101-lang.github.io/hearth-showcase/#updates"/>
     <updated>2026-10-23T00:00:00Z</updated>
-    <summary>Hearth runs on each PC you own, Linux or Windows, and they join together under one account with a pairing code. Each PC watches its own services, and you see and manage all of them from any of them, or from your phone. Updates are offered, never forced: Hearth tells you a new version is out and you update when you are ready.</summary>
+    <summary>Hearth runs on each PC you own, Linux or Windows, and they join together under one account with a pairing code. Each PC watches its own services, and you see and manage all of them from any of them, or from your phone. Update, November 6: linking your PCs this way is Hearth Connected, a paid add-on. Hearth on each PC on its own stays free. Updates are offered, never forced: Hearth tells you a new version is out and you update when you are ready.</summary>
   </entry>
   <entry>
     <title>Ember can install new apps, not just fix them</title>
